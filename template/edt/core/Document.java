@@ -9,9 +9,9 @@ public class Document extends Section {
 
 	}
 
-	public TextElement getTextElement( String id ) {}
+	public TextElement getTextElement(String id ) {}
 
-	public void indexElement( String id , TextElement ele ) {}
+	public void indexElement(String id , TextElement ele ) {}
 
 	public String getHeadLine() {}
 
@@ -19,7 +19,15 @@ public class Document extends Section {
 
 	public void loadDocument() {}
 
-	public void saveDocument() {}
+	public void saveDocument() {
+
+		FileOutputStream filestream = new FileOutputStream(getFilename());
+
+		ObjectOutputStream os = new ObjectOutputStream(filestream);
+
+		os.writeObject(this);
+
+	}
 
 	public String getFilename() {
 		return _filename;

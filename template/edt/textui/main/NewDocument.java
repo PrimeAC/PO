@@ -1,5 +1,7 @@
 package edt.textui.main;
 
+import edt.core.App;
+
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -28,6 +30,10 @@ public class NewDocument extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
+
+        Document doc = new Document();
+
+        setDocument(doc);
         
     }
 }
