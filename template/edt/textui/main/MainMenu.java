@@ -12,16 +12,17 @@ import pt.utl.ist.po.ui.Menu;
 
 public class MainMenu extends Menu {
 
-    public MainMenu(/* FIXME: decls of argument(s) for receiver(s) */) {
+    public MainMenu(App app) {
         super(MenuEntry.TITLE,
-              new Command<?>[] { new NewDocument(/* FIXME: receiver(s) */),
-                      new OpenDocument(/* FIXME: receiver(s) */),
-                      new SaveDocument(/* FIXME: receiver(s) */),
-                      new ShowMetadata(/* FIXME: receiver(s) */),
-                      new AddAuthor(/* FIXME: receiver(s) */),
-                      new ListTopSections(/* FIXME: receiver(s) */),
-                      new ShowTextElement(/* FIXME: receiver(s) */),
-                      new EditSection(/* FIXME: receiver(s) */),
+              new Command<?>[] { 
+                      new NewDocument(app),
+                      new OpenDocument(app),
+                      new SaveDocument(app),
+                      new ShowMetadata(app),
+                      new AddAuthor(app),
+                      new ListTopSections(app),
+                      new ShowTextElement(app),
+                      new EditSection(app),
                       });
     }
 }

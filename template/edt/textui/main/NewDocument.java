@@ -11,15 +11,15 @@ import pt.utl.ist.po.ui.InputInteger;
 /**
  * Command for creating a new document in the editor.
  */
-public class NewDocument extends Command</* FIXME: core class */> {
+public class NewDocument extends Command<App> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public NewDocument(/* FIXME: decls of argument(s) for receiver(s) */) {
-        super(MenuEntry.NEW, ent);
+    public NewDocument(App app) {
+        super(MenuEntry.NEW, app);
     }
 
     /**
@@ -28,6 +28,6 @@ public class NewDocument extends Command</* FIXME: core class */> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        
     }
 }
