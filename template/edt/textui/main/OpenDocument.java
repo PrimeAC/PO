@@ -14,15 +14,15 @@ import pt.utl.ist.po.ui.InvalidOperation;
 /**
  * Command for opening an existing document in the editor.
  */
-public class OpenDocument extends Command</* FIXME: core class */> {
+public class OpenDocument extends Command<App> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public OpenDocument(/* FIXME: decls of argument(s) for receiver(s) */) {
-        super(MenuEntry.OPEN, ent);
+    public OpenDocument(App app) {
+        super(MenuEntry.OPEN, app);
     }
 
     /**
@@ -31,6 +31,13 @@ public class OpenDocument extends Command</* FIXME: core class */> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() throws InvalidOperation {
-        /* FIXME: implement command */
+        
+        Form f = new Form();
+        InputString inS = new InputString(f, Message.openFile());
+        f.parse();
+
+        entity().getDocument().setFilename()=inS.value();
+
+        entity().getDocument().loadDocument();
     }
 }

@@ -1,3 +1,5 @@
+import pt.utl.ist.po.ui.Display;
+
 public class Document extends Section {
 
 	private String _filename;
@@ -17,15 +19,40 @@ public class Document extends Section {
 
 	public void removeFromIndex(TextElement ele) {}
 
-	public void loadDocument() {}
+	public void loadDocument() {
+
+		try {
+
+			FileInputStream filestream = new FileInputStream(getFilename());
+
+			ObjectInputStream is = new ObjectInputStream(filestream);
+
+			Document doc = (Document) is.readObject();
+
+			setDocument(doc);
+		}
+		catch(Exception e) {
+			Display display = new Display();
+			display.add(Message.fileNotFound());
+			display.display();
+		}
+}
 
 	public void saveDocument() {
 
-		FileOutputStream filestream = new FileOutputStream(getFilename());
+		try{
 
-		ObjectOutputStream os = new ObjectOutputStream(filestream);
+			FileOutputStream filestream = new FileOutputStream(getFilename());
 
-		os.writeObject(this);
+			ObjectOutputStream os = new ObjectOutputStream(filestream);
+
+			os.writeObject(this);
+		}
+		catch(Exception e){
+			Display display = new Display();
+			display.add("Error at file output stream");
+			display.display();
+		}
 
 	}
 
