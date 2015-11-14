@@ -1,7 +1,7 @@
 package edt.textui.main;
 
 import edt.core.App;
-
+import edt.core.Document;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputString;
@@ -34,20 +34,20 @@ public class SaveDocument extends Command<App> {
         
         String filename = entity().getDocument().getFilename();
         Document document = new Document();
-        document = LoadDocument(filename);
+        document = loadDocument(filename);
         if(!(entity().getDocument()).equals(document)){
-            if (filename==NULL) {
+            if (filename==null) {
 
                 Form f = new Form();
                 InputString inS = new InputString(f, Message.newSaveAs());
                 f.parse();
 
-                entity().getDocument().setFilename()=inS.value();
+                entity().getDocument().setFilename(inS.value());
 
             } 
             entity().getDocument().saveDocument();
 
-            }
         }
     }
 }
+

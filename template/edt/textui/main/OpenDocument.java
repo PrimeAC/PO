@@ -2,6 +2,7 @@ package edt.textui.main;
 
 import java.io.IOException;
 
+import edt.core.App;
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -36,7 +37,7 @@ public class OpenDocument extends Command<App> {
         InputString inS = new InputString(f, Message.openFile());
         f.parse();
 
-        entity().getDocument().setFilename()=inS.value();
+        entity().getDocument().setFilename(inS.value());
 
         entity().getDocument().loadDocument();
     }

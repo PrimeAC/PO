@@ -1,5 +1,5 @@
 package edt.textui.section;
-
+import edt.core.App;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
@@ -11,15 +11,15 @@ import pt.utl.ist.po.ui.InputString;
 /**
  * Command for indexing a paragraph (nomear um parágrafo 2.2.9) of the current section.
  */
-public class IndexParagraph extends Command</* FIXME: core class */> {
+public class IndexParagraph extends Command<App> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public IndexParagraph(/* FIXME: decls of argument(s) for receiver(s) */) {
-        super(MenuEntry.NAME_PARAGRAPH, ent);
+    public IndexParagraph(App app) {
+        super(MenuEntry.NAME_PARAGRAPH, app);
     }
 
     /**

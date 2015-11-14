@@ -1,5 +1,5 @@
 package edt.textui.section;
-
+import edt.core.App;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
@@ -11,15 +11,15 @@ import pt.utl.ist.po.ui.InputInteger;
 /**
  * Command for indexing ia subsection (nomear secção 2.2.6) the current section .
  */
-public class IndexSection extends Command</* FIXME: core class */> {
+public class IndexSection extends Command<App> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public IndexSection(/* FIXME: decls of argument(s) for receiver(s) */) {
-        super(MenuEntry.NAME_SECTION, ent);
+    public IndexSection(App app) {
+        super(MenuEntry.NAME_SECTION, app);
     }
 
     /**

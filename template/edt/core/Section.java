@@ -1,13 +1,16 @@
 package edt.core;
 
+import java.util.*;
+import java.lang.*;
+
 public class Section extends TextElement {
 
 	private String _title;
-	private List<Paragraph> _paragraph = new ArrayList<>();
-	private List<Section> _subsection = new ArrayList<>();
+	private List<Paragraph> _paragraph = new ArrayList();
+	private List<Section> _subsection = new ArrayList();
 
 
-	public String  getHeadLine(){ //************************
+	public String  getHeadLine(){ 
 	}
 
 	public void setTitle(String title){
@@ -16,30 +19,31 @@ public class Section extends TextElement {
 
 	public int getSize() {
 		int tamanhoParagrafo = 0;
-		int tamanhoTitulo = _title.lenght();
+		int tamanhoTitulo = _title.length();
 
-		for (Paragraph paragraph : _paragraph)
-			tamanhoParagrafo += paragraph.getSize();
+		for (Paragraph i : _paragraph)
+			tamanhoParagrafo += i.getSize();
 
-		for (Section subsection : _subsection){
-			tamanhoTitulo += _title.lenght();
-			for (Paragraph paragraph : _paragraph)
-			tamanhoParagrafo += paragraph.getSize();}
+		for (Section i : _subsection) {
+			tamanhoTitulo += _title.length();
+
+			for (Paragraph j : _paragraph) {
+			tamanhoParagrafo += j.getSize();
+			}
+		}
 
 		return tamanhoParagrafo+tamanhoTitulo;
 
-
-
 	}
 
-	public String title(){
+	public String getTitle(){
 		return _title;
 	}
 
 	public String getContent() {
-		String content = getHeadLine ;
-		for (Paragraph paragraph : _paragraph)
-			content += paragraph.getContent(); 
+		String content;
+		for (Paragraph i : _paragraph)
+			content += i.getContent(); 
 		return content;
 	}
 
@@ -48,7 +52,7 @@ public class Section extends TextElement {
 	}
 
 	public Section getSection(int idx) {
-		return _subsection.get(idx)
+		return _subsection.get(idx);
 	}
 
 	public String getSubsectionIndex() {
@@ -61,7 +65,7 @@ public class Section extends TextElement {
 	}
 
 	public boolean removeSection(int idx , Document doc ) {
-		_subsection.remove(doc.getSection(idx))
+		_subsection.remove(doc.getSection(idx));
 	}
 
 	public void addParagraph(int idx , Paragraph par) {

@@ -1,5 +1,6 @@
 package edt.textui.section;
 
+import edt.core.App;
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -13,15 +14,15 @@ import edt.textui.main.EditSection;
 /**
  * Command for selecting a subsection of the current section and edit it.
  */
-public class SelectSection extends Command</* FIXME: core class */> {
+public class SelectSection extends Command<App> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public SelectSection(/* FIXME: decls of argument(s) for receiver(s) */) {
-        super(MenuEntry.SELECT_SECTION, ent);
+    public SelectSection(App app) {
+        super(MenuEntry.SELECT_SECTION, app);
     }
 
     /**

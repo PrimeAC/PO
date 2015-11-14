@@ -1,9 +1,12 @@
 package edt.textui.main;
 
+import edt.core.App;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputString;
+import edt.core.Document;
+import edt.core.TextElement;
 
 /* FIXME: import core classes here */
 
@@ -27,12 +30,23 @@ public class ShowTextElement extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        
+
+        Display display = new Display();
+        Document document = new Document();
+
         Form f = new Form();
         InputString inS = new InputString(f, Message.requestElementId());
         f.parse();
 
-        getTextElement(inS.getValue());
+        document = getDocument();
 
+        if(document.getTextElement(inS.value())!=null) {
+            display.add(document.getTextElement(inS.value()).getContent());
+        }
+        else {
+            display.add(Message.noSuchTextElement(document.getTextElement(inS.value()).getKey()));
+        }
+
+        display.display();
     }
 }

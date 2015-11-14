@@ -7,6 +7,7 @@ import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputInteger;
+import edt.core.Document;
 
 /* FIXME: import core classes here */
 

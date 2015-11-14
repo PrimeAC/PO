@@ -1,5 +1,8 @@
 package edt.textui.main;
 
+import edt.core.App;
+import edt.core.Document;
+import edt.core.Author;
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -34,11 +37,11 @@ public class AddAuthor extends Command<App> {
         InputString inS = new InputString(f, Message.requestAuthorName());
         f.parse();
 
-        name = inS.getValue();
+        name = inS.value();
 
-        InputString inS = new InputString(f, Message.requestEmail());
+        inS = new InputString(f, Message.requestEmail());
 
-        email = inS.getValue();
+        email = inS.value();
 
         Author author = new Author(name, email);
 

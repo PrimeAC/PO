@@ -1,5 +1,6 @@
 package edt.textui.section;
 
+import edt.core.App;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 
@@ -8,15 +9,15 @@ import pt.utl.ist.po.ui.Display;
 /**
  * Command for showing the content of current section.
  */
-public class ShowSection extends Command</* FIXME: core class */> {
+public class ShowSection extends Command<App> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public ShowSection(/* FIXME: decls of argument(s) for receiver(s) */) {
-        super(MenuEntry.SHOW_CONTENT, ent);
+    public ShowSection(App app) {
+        super(MenuEntry.SHOW_CONTENT, app);
     }
 
     /**

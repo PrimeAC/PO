@@ -14,8 +14,8 @@ public abstract class TextElement {
 
 	protected boolean isIndexed() {}
 
-	public abstract String getContent() {}
+	public abstract String getContent();
 
-	public abstract int getSize() {}
+	public abstract int getSize();
 
 }

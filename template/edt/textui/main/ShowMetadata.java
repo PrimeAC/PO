@@ -1,10 +1,13 @@
 package edt.textui.main;
 
+import java.util.*;
+import java.lang.*;
+import edt.core.App;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import edt.textui.main.Message;
-/*import edt.core.Author;*/
 import edt.core.Document;
+import edt.core.Author;
 /* FIXME: import core classes here */
 
 /**
@@ -28,14 +31,22 @@ public class ShowMetadata extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() {
         Display display = new Display();
-        /*Author autor = new Author();*/
-        Document documento = new Document();
+        Document document = new Document();
 
-        if(documento == NULL) {
-            System.out.println("Nada para imprimir");
+        document = getDocument();
+
+        display.add(Message.documentTitle(document.getTitle()));
+
+        for(Author i : document.getAuthors()) {
+            display.add(Message.author(i.getName(), i.getEmail()));
         }
-        display.add(documento.getFilename());
-        /*display.add( autor.getName()"\\/"+autor.getEmail());*/
+
+        display.add(Message.documentSections(document.getSubsections().size()));
+
+        display.add(Message.documentBytes(document.getSize()));
+
+        display.add(Message.documentIdentifiers(document.getTextElement().size()));
+        
         display.display();
     }
 }

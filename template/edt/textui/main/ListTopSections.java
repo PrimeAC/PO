@@ -2,6 +2,7 @@ package edt.textui.main;
 
 import java.util.SortedSet;
 
+import edt.core.App;
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -31,10 +32,17 @@ public class ListTopSections extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
+        Display display = new Display();
         Document document = new Document();
-        int i;
 
-        for(: document.)
+        document = getDocument();
 
+        display.add("{"+document.getTitle()+"}");
+
+        for(Section i : document.getSubsections()) {
+            display.add(Message.sectionIndexEntry(i.getKey(), i.getTitle()));
+        }
+
+        display.display();
     }
 }

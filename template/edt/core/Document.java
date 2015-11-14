@@ -1,6 +1,7 @@
 package edt.core;
 
 import pt.utl.ist.po.ui.Display;
+import edt.textui.main.Message;
 
 import java.util.*;
 import java.io.*;
@@ -15,11 +16,15 @@ public class Document extends Section {
 
 	public void addAuthor(Author author) {
 
-		_authors.put(author.gerName(), author); 
+		_authors.put(author.getName(), author); 
 
 	}
 
-	public TreeMap getAuthors() {
+	public List<TextElement> getTextElement(){
+		return _textElement;
+	}
+
+	public TreeMap<String, Author> getAuthors() {
 		return _authors;
 
 	}
@@ -31,7 +36,8 @@ public class Document extends Section {
 				return i;
 			}
 		}
-		System.out.println("Text Element not Found!\n");
+		return null;
+		
 	}
 
 	public void indexElement(String id , TextElement ele) {
@@ -42,7 +48,7 @@ public class Document extends Section {
 	//public String getHeadLine() {}
 
 	public void removeFromIndex(TextElement ele) {
-		remove(ele);
+		_textElement.remove(ele);
 	}
 
 	public void loadDocument() {
