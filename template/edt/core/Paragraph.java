@@ -1,14 +1,8 @@
-import java.io.*;
-
-
+package edt.core;
 
 public class Paragraph {
 	
 	private String _text;
-
-	public Paragraph() {
-		_text = "";
-	}
 
 	public void setText(String text ) {
 		_text = text;

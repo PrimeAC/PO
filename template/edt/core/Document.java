@@ -3,6 +3,7 @@ package edt.core;
 import pt.utl.ist.po.ui.Display;
 
 import java.util.*;
+import java.io.*;
 
 public class Document extends Section {
 
@@ -29,7 +30,6 @@ public class Document extends Section {
 			if(i.getKey().equals(id)){
 				return i;
 			}
-			else continue;
 		}
 		System.out.println("Text Element not Found!\n");
 	}

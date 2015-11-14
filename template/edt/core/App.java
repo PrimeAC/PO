@@ -1,3 +1,4 @@
+package edt.core;
 
 public class App {
 

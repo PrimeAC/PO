@@ -1,3 +1,5 @@
+package edt.core;
+
 public abstract class TextElement {
 
 	private String _key;
