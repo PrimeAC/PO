@@ -7,6 +7,7 @@ import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
 import edt.core.Document;
+import edt.core.Section;
 
 /* FIXME: import core classes here */
 
@@ -30,6 +31,10 @@ public class ListTopSections extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        
+        Document document = new Document();
+        int i;
+
+        for(: document.)
+
     }
 }
