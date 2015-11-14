@@ -1,4 +1,4 @@
-
+package edt.core;
 
 public class Author {
 	

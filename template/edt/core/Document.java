@@ -1,23 +1,49 @@
+package edt.core;
+
 import pt.utl.ist.po.ui.Display;
+
+import java.util.*;
 
 public class Document extends Section {
 
 	private String _filename;
 
-	public void addAuthor() {
+	private List<TextElement> _textElement = new ArrayList();
+
+	private TreeMap<String, Author> _authors = new TreeMap<String, Author>();
+
+	public void addAuthor(Author author) {
+
+		_authors.put(author.gerName(), author); 
 
 	}
-	public void getAuthors() {
+
+	public TreeMap getAuthors() {
+		return _authors;
 
 	}
 
-	public TextElement getTextElement(String id ) {}
+	public TextElement getTextElement(String id) {
 
-	public void indexElement(String id , TextElement ele ) {}
+		for(TextElement i : _textElement){
+			if(i.getKey().equals(id)){
+				return i;
+			}
+			else continue;
+		}
+		System.out.println("Text Element not Found!\n");
+	}
 
-	public String getHeadLine() {}
+	public void indexElement(String id , TextElement ele) {
+		ele.setKey(id);
+		_textElement.add(ele);
+	}
 
-	public void removeFromIndex(TextElement ele) {}
+	//public String getHeadLine() {}
+
+	public void removeFromIndex(TextElement ele) {
+		remove(ele);
+	}
 
 	public void loadDocument() {
 

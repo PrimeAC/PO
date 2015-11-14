@@ -11,15 +11,15 @@ import pt.utl.ist.po.ui.InputString;
 /**
  * Command for adding an author to the current document in the editor.
  */
-public class AddAuthor extends Command</* FIXME: core class */> {
+public class AddAuthor extends Command<App> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public AddAuthor(/* FIXME: decls of argument(s) for receiver(s) */) {
-        super(MenuEntry.ADD_AUTHOR, ent);
+    public AddAuthor(App app) {
+        super(MenuEntry.ADD_AUTHOR, app);
     }
 
     /**
@@ -28,6 +28,20 @@ public class AddAuthor extends Command</* FIXME: core class */> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        String name;
+        String email;
+        Form f = new Form();
+        InputString inS = new InputString(f, Message.requestAuthorName());
+        f.parse();
+
+        name = inS.getValue();
+
+        InputString inS = new InputString(f, Message.requestEmail());
+
+        email = inS.getValue();
+
+        Author author = new Author(name, email);
+
+        addAuthor(author);
     }
 }
