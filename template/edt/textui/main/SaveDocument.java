@@ -34,8 +34,8 @@ public class SaveDocument extends Command<App> {
         
         String filename = entity().getDocument().getFilename();
         Document document = new Document();
-        document = loadDocument(filename);
-        if(!(entity().getDocument()).equals(document)){
+        
+        if(!(entity().getDocument()).equals(document.loadDocument(filename))){
             if (filename==null) {
 
                 Form f = new Form();

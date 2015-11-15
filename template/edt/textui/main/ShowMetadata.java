@@ -31,21 +31,21 @@ public class ShowMetadata extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() {
         Display display = new Display();
-        Document document = new Document();
+        //Document document = new Document();
+        App document = new App();
 
-        document = getDocument();
 
-        display.add(Message.documentTitle(document.getTitle()));
+        display.add(Message.documentTitle(document.getDocument().getTitle()));
 
-        for(Author i : document.getAuthors()) {
+        for(Author i : document.getDocument().getAuthors().keySet()) {
             display.add(Message.author(i.getName(), i.getEmail()));
         }
 
-        display.add(Message.documentSections(document.getSubsections().size()));
+        display.add(Message.documentSections(document.getDocument().getSubsections().size()));
 
-        display.add(Message.documentBytes(document.getSize()));
+        display.add(Message.documentBytes(document.getDocument().getSize()));
 
-        display.add(Message.documentIdentifiers(document.getTextElement().size()));
+        display.add(Message.documentIdentifiers(document.getDocument().getTextElement().size()));
         
         display.display();
     }

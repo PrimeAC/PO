@@ -33,13 +33,14 @@ public class ListTopSections extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() {
         Display display = new Display();
-        Document document = new Document();
+        //Document document = new Document();
+        App document = new App();
 
-        document = getDocument();
+        //document = getDocument() ;
 
-        display.add("{"+document.getTitle()+"}");
+        display.add("{"+document.getDocument().getTitle()+"}");
 
-        for(Section i : document.getSubsections()) {
+        for(Section i : document.getDocument().getSubsections()) {
             display.add(Message.sectionIndexEntry(i.getKey(), i.getTitle()));
         }
 

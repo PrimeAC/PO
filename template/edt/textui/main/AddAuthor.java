@@ -36,6 +36,8 @@ public class AddAuthor extends Command<App> {
         Form f = new Form();
         InputString inS = new InputString(f, Message.requestAuthorName());
         f.parse();
+        
+        Document document = new Document();
 
         name = inS.value();
 
@@ -45,6 +47,6 @@ public class AddAuthor extends Command<App> {
 
         Author author = new Author(name, email);
 
-        addAuthor(author);
+        document.addAuthor(author);
     }
 }

@@ -10,7 +10,8 @@ public class Section extends TextElement {
 	private List<Section> _subsection = new ArrayList();
 
 
-	public String  getHeadLine(){ 
+	public String  getHeadLine(){
+		return "{"+_title+"}"; 
 	}
 
 	public void setTitle(String title){
@@ -41,7 +42,7 @@ public class Section extends TextElement {
 	}
 
 	public String getContent() {
-		String content;
+		String content ="";
 		for (Paragraph i : _paragraph)
 			content += i.getContent(); 
 		return content;
@@ -55,9 +56,9 @@ public class Section extends TextElement {
 		return _subsection.get(idx);
 	}
 
-	public String getSubsectionIndex() {
+	//public String getSubsectionIndex() {
     //(....).getKey()
-	} 
+	//} 
 
 
 	public void addSection(int idx , Section sec) {
@@ -65,7 +66,7 @@ public class Section extends TextElement {
 	}
 
 	public boolean removeSection(int idx , Document doc ) {
-		_subsection.remove(doc.getSection(idx));
+		return _subsection.remove(doc.getSection(idx));
 	}
 
 	public void addParagraph(int idx , Paragraph par) {
@@ -73,7 +74,7 @@ public class Section extends TextElement {
 	}
 
 	public boolean removeParagraph(int idx , Document doc ) {
-		_paragraph.remove(doc.getParagraph(idx));
+		return _paragraph.remove(doc.getParagraph(idx));
 	}
 
 	public Paragraph getParagraph(int idx) {

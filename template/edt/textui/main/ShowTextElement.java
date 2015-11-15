@@ -32,19 +32,20 @@ public class ShowTextElement extends Command<App> {
     public final void execute() {
 
         Display display = new Display();
-        Document document = new Document();
+        //Document document = new Document();
+        App document = new App();
 
         Form f = new Form();
         InputString inS = new InputString(f, Message.requestElementId());
         f.parse();
 
-        document = getDocument();
+        ;
 
-        if(document.getTextElement(inS.value())!=null) {
-            display.add(document.getTextElement(inS.value()).getContent());
+        if(document.getDocument().getTextElement(inS.value())!=null) {
+            display.add(document.getDocument().getTextElement(inS.value()).getContent());
         }
         else {
-            display.add(Message.noSuchTextElement(document.getTextElement(inS.value()).getKey()));
+            display.add(Message.noSuchTextElement(document.getDocument().getTextElement(inS.value()).getKey()));
         }
 
         display.display();

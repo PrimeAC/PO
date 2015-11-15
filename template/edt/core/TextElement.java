@@ -12,7 +12,7 @@ public abstract class TextElement {
 		_key= key;
 	}
 
-	protected boolean isIndexed() {}
+	//protected boolean isIndexed() {}
 
 	public abstract String getContent();
 

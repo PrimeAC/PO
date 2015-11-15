@@ -1,5 +1,6 @@
 package edt.textui.section;
 
+import edt.core.App;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
