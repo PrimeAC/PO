@@ -33,9 +33,16 @@ public class SaveDocument extends Command<App> {
     public final void execute() throws InvalidOperation {
         
         String filename = entity().getDocument().getFilename();
+        App app = new App();
         Document document = new Document();
+        app.setDocument(document);
+        document= app.getDocument();
+        document.setFilename(filename);
+        document.loadDocument();
+
+        //document.setFilename(filename);
         
-        if(!(entity().getDocument()).equals(document.loadDocument(filename))){
+        if(!(entity().getDocument()).equals(app.getDocument())){
             if (filename==null) {
 
                 Form f = new Form();

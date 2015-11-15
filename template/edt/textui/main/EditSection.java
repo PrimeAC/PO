@@ -3,7 +3,9 @@ package edt.textui.main;
 import edt.core.App;
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
+import edt.textui.section.EditMenu;
 
+import static pt.utl.ist.po.ui.UserInteraction.IO;
 import edt.textui.section.EditMenu;
 
 /* FIXME: import core classes here */
@@ -28,8 +30,13 @@ public class EditSection extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
+
+        App app =  new App();
+        EditMenu menu = new EditMenu(app);
+
+        menu.open();
+        IO.close();
         
-        EditMenu.open();
     }
 }
 

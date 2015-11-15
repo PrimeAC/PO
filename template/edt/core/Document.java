@@ -59,10 +59,11 @@ public class Document extends Section {
 
 			ObjectInputStream is = new ObjectInputStream(filestream);
 
-			Document doc = (Document) is.readObject();
-			App app = new App();
+			Document doc = new Document();
+			doc = (Document) is.readObject();
+			//App app = new App();
 
-			app.setDocument(doc);
+			//app.setDocument(doc);	
 		}
 		catch(Exception e) {
 			Display display = new Display();

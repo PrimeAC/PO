@@ -2,6 +2,7 @@ package edt.textui.main;
 
 import java.util.*;
 import java.lang.*;
+
 import edt.core.App;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -31,21 +32,23 @@ public class ShowMetadata extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() {
         Display display = new Display();
-        //Document document = new Document();
+        Document doc = new Document();
         App document = new App();
+        Set<String> keys = document.getDocument().getAuthors().keySet();
 
+        doc = document.getDocument();
 
-        display.add(Message.documentTitle(document.getDocument().getTitle()));
+        display.add(Message.documentTitle(doc.getTitle()));
 
-        for(Author i : document.getDocument().getAuthors().keySet()) {
-            display.add(Message.author(i.getName(), i.getEmail()));
+        for(String i : keys) {
+            display.add(Message.author(doc.getAuthors().get(i).getName(), doc.getAuthors().get(i).getEmail()));
         }
 
-        display.add(Message.documentSections(document.getDocument().getSubsections().size()));
+        display.add(Message.documentSections(doc.getSubsections().size()));
 
-        display.add(Message.documentBytes(document.getDocument().getSize()));
+        display.add(Message.documentBytes(doc.getSize()));
 
-        display.add(Message.documentIdentifiers(document.getDocument().getTextElement().size()));
+        display.add(Message.documentIdentifiers(doc.getTextElement().size()));
         
         display.display();
     }

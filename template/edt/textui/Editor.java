@@ -1,11 +1,21 @@
 package edt.textui;
 
+import edt.core.App;
+
+import edt.textui.main.MainMenu;
+
+import static pt.utl.ist.po.ui.UserInteraction.IO;
 /**
  * Themain class of the edt application.
  **/
 public class Editor {
 
     public static void main(String[] args) {
-        /* FIXME: Add code */
+        
+        App app =  new App();
+        MainMenu menu = new MainMenu(app);
+    
+        menu.open();
+        IO.close();
     }
 }
