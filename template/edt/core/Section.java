@@ -6,11 +6,14 @@ import java.lang.*;
 public class Section extends TextElement {
 
 	private String _title;
-	private List<Paragraph> _paragraph = new ArrayList();
-	private List<Section> _subsection = new ArrayList();
+	private List<Paragraph> _paragraph = new ArrayList<>();
+	private List<Section> _subsection = new ArrayList<>();
 
 
 	public String  getHeadLine(){
+		if(_title==null){
+			return "{}";
+		} 
 		return "{"+_title+"}"; 
 	}
 
@@ -19,14 +22,24 @@ public class Section extends TextElement {
 	}
 
 	public int getSize() {
-		int tamanhoParagrafo = 0;
-		int tamanhoTitulo = _title.length();
+		int tamanhoParagrafo;
+		int tamanhoTitulo;
+
+		tamanhoParagrafo = 0;
+
+		if(_title!=null){
+			tamanhoTitulo = _title.length();
+		} 
+		else tamanhoTitulo = 0;
 
 		for (Paragraph i : _paragraph)
 			tamanhoParagrafo += i.getSize();
 
 		for (Section i : _subsection) {
-			tamanhoTitulo += _title.length();
+			
+			if(_title!=null){
+			tamanhoTitulo += i._title.length();
+			} 
 
 			for (Paragraph j : _paragraph) {
 			tamanhoParagrafo += j.getSize();

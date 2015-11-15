@@ -31,10 +31,10 @@ public class NewDocument extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        App application = new App();
+        //App application = new App();
         Document doc = new Document();
 
-        application.setDocument(doc);
+        entity().setDocument(doc);
         
     }
 }

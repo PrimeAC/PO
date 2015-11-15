@@ -2,20 +2,20 @@ package edt.core;
 
 import pt.utl.ist.po.ui.Display;
 import edt.textui.main.Message;
+import pt.utl.ist.po.ui.InvalidOperation;
 
 import java.util.*;
 import java.io.*;
 
-public class Document extends Section {
+public class Document extends Section implements Serializable {
 
 	private String _filename;
 
-	private List<TextElement> _textElement = new ArrayList();
+	private List<TextElement> _textElement = new ArrayList<>();
 
-	private TreeMap<String, Author> _authors = new TreeMap<String, Author>();
+	private TreeMap<String, Author> _authors = new TreeMap<>();
 
 	public void addAuthor(Author author) {
-
 		_authors.put(author.getName(), author); 
 
 	}
@@ -61,9 +61,8 @@ public class Document extends Section {
 
 			Document doc = new Document();
 			doc = (Document) is.readObject();
-			//App app = new App();
-
-			//app.setDocument(doc);	
+			is.close();
+	
 		}
 		catch(Exception e) {
 			Display display = new Display();
@@ -81,6 +80,8 @@ public class Document extends Section {
 			ObjectOutputStream os = new ObjectOutputStream(filestream);
 
 			os.writeObject(this);
+
+			os.close();
 		}
 		catch(Exception e){
 			Display display = new Display();

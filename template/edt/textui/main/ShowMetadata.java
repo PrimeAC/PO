@@ -33,22 +33,21 @@ public class ShowMetadata extends Command<App> {
     public final void execute() {
         Display display = new Display();
         Document doc = new Document();
-        App document = new App();
-        Set<String> keys = document.getDocument().getAuthors().keySet();
+        Set<String> keys = entity().getDocument().getAuthors().keySet();
 
-        doc = document.getDocument();
+        doc = entity().getDocument();
 
-        display.add(Message.documentTitle(doc.getTitle()));
+        display.add(Message.documentTitle(doc.getHeadLine()));
 
         for(String i : keys) {
-            display.add(Message.author(doc.getAuthors().get(i).getName(), doc.getAuthors().get(i).getEmail()));
+            display.addNewLine(Message.author(doc.getAuthors().get(i).getName(), doc.getAuthors().get(i).getEmail()));
         }
 
-        display.add(Message.documentSections(doc.getSubsections().size()));
+        display.addNewLine(Message.documentSections(doc.getSubsections().size()));
 
-        display.add(Message.documentBytes(doc.getSize()));
+        display.addNewLine(Message.documentBytes(doc.getSize()));
 
-        display.add(Message.documentIdentifiers(doc.getTextElement().size()));
+        display.addNewLine(Message.documentIdentifiers(doc.getTextElement().size()));
         
         display.display();
     }

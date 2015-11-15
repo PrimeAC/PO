@@ -35,18 +35,11 @@ public class AddAuthor extends Command<App> {
         String email;
         Form f = new Form();
         InputString inS = new InputString(f, Message.requestAuthorName());
+        InputString inE = new InputString(f, Message.requestEmail());
         f.parse();
-        
-        Document document = new Document();
 
-        name = inS.value();
+        Author author = new Author(inS.value(), inE.value());
 
-        inS = new InputString(f, Message.requestEmail());
-
-        email = inS.value();
-
-        Author author = new Author(name, email);
-
-        document.addAuthor(author);
+        entity().getDocument().addAuthor(author);
     }
 }

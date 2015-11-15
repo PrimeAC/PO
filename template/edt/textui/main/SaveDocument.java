@@ -32,29 +32,31 @@ public class SaveDocument extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() throws InvalidOperation {
         
-        String filename = entity().getDocument().getFilename();
         App app = new App();
         Document document = new Document();
+
         app.setDocument(document);
-        document= app.getDocument();
-        document.setFilename(filename);
-        document.loadDocument();
+        document = app.getDocument();
 
-        //document.setFilename(filename);
-        
-        if(!(entity().getDocument()).equals(app.getDocument())){
-            if (filename==null) {
+        if(entity().getDocument().getFilename()!=null){   
+            String filename = entity().getDocument().getFilename(); 
+            document.setFilename(filename);
+            document.loadDocument();
 
-                Form f = new Form();
-                InputString inS = new InputString(f, Message.newSaveAs());
-                f.parse();
+            if(!(entity().getDocument()).equals(app.getDocument())){
+                entity().getDocument().saveDocument();
+            }
+        }
+        else {
+            Form f = new Form();
+            InputString inS = new InputString(f, Message.newSaveAs());
+            f.parse();
+            if(!(entity().getDocument()).equals(app.getDocument())){
 
                 entity().getDocument().setFilename(inS.value());
-
-            } 
-            entity().getDocument().saveDocument();
-
+                entity().getDocument().saveDocument();
+            }
         }
-    }
+    }   
 }
 
