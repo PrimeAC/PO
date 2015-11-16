@@ -2,7 +2,6 @@ package edt.textui.main;
 
 import edt.core.App;
 import edt.core.Document;
-
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputString;
@@ -10,6 +9,7 @@ import pt.utl.ist.po.ui.InvalidOperation;
 
 import java.io.IOException;
 
+/* FIXME: import core classes here */
 
 /**
  * Command for saving the current document in the editor.
@@ -19,7 +19,7 @@ public class SaveDocument extends Command<App> {
     /**
      * Constructor.
      * 
-     * @param app the target entity.
+     * @param ent the target entity.
      */
     public SaveDocument(App app) {
         super(MenuEntry.SAVE, app);
@@ -37,13 +37,16 @@ public class SaveDocument extends Command<App> {
 
         app.setDocument(document);
         document = app.getDocument();
+        //System.out.println("Filename:"+entity().getDocument().getFilename());
 
-        if (entity().getDocument().getFilename()!=null) {   
+        if(entity().getDocument().getFilename()!=null){   
             String filename = entity().getDocument().getFilename(); 
             document.setFilename(filename);
             
 
-            if (!(entity().getDocument()).equals(document.loadDocument(filename))) {
+            if(!(entity().getDocument()).equals(document.loadDocument(filename))){
+                //System.out.println("guardei");
+
                 entity().getDocument().saveDocument();
             }
         }
