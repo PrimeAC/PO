@@ -37,7 +37,7 @@ public class ShowMetadata extends Command<App> {
 
         doc = entity().getDocument();
 
-        display.add(Message.documentTitle(doc.getHeadLine()));
+        display.add(Message.documentTitle(doc.getTitle()));
 
         for(String i : keys) {
             display.addNewLine(Message.author(doc.getAuthors().get(i).getName(), doc.getAuthors().get(i).getEmail()));

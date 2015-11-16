@@ -31,11 +31,9 @@ public class EditSection extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() {
 
-        App app =  new App();
-        EditMenu menu = new EditMenu(app);
+        EditMenu menu = new EditMenu(entity());
 
         menu.open();
-        IO.close();
         
     }
 }

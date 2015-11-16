@@ -45,10 +45,11 @@ public class OpenDocument extends Command<App> {
         app.setDocument(document);
         document = app.getDocument();
 
-        document.setFilename(inS.value());
+        //document.setFilename();
+        entity().setDocument(document.loadDocument(inS.value()));
+        //if(document!=null) {
 
-        document.loadDocument();
-
-        entity().setDocument(document);
+         //   entity().setDocument(document);
+        //}
     }
 }

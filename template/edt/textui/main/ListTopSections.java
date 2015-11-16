@@ -37,9 +37,13 @@ public class ListTopSections extends Command<App> {
         display.add(entity().getDocument().getHeadLine());
 
         for(Section i : entity().getDocument().getSubsections()) {
-            display.add(Message.sectionIndexEntry(i.getKey(), i.getTitle()));
+            if(i.getKey() == null){
+               display.addNewLine(Message.sectionIndexEntry("", i.getTitle())); 
+            }
+            else {
+                display.addNewLine(Message.sectionIndexEntry(i.getKey(), i.getTitle()));
+            }
         }
-
         display.display();
     }
 }

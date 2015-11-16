@@ -1,0 +1,24 @@
+*** tests/A-005-002-M-ok.out	2015-11-09 23:34:06.000000000 +0000
+--- tests/A-005-002-M-ok.outhyp	2015-11-16 11:34:21.941905659 +0000
+***************
+*** 8,17 ****
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Título: Objects in Space
+! Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
+  Secções de topo: 0
+! Dimensão do documento (bytes): 208
+  Identificadores únicos: 0
+  Menu Principal
+  1 - Novo
+--- 8,16 ----
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Título: 
+  Secções de topo: 0
+! Dimensão do documento (bytes): 0
+  Identificadores únicos: 0
+  Menu Principal
+  1 - Novo

@@ -1,0 +1,22 @@
+*** tests/A-003-002-M-ok.out	2015-11-09 23:34:06.000000000 +0000
+--- tests/A-003-002-M-ok.outhyp	2015-11-16 11:34:21.657905670 +0000
+***************
+*** 18,27 ****
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: {Objects in Space}
+! [] {A Walk in the Desert}
+! [] {Patience You Must Have}
+! [] {Drama in the Clouds}
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+--- 18,24 ----
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: {}
+  Menu Principal
+  1 - Novo
+  2 - Abrir

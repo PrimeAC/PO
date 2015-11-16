@@ -1,6 +1,8 @@
 package edt.core;
 
-public class Author {
+import java.io.*;
+
+public class Author implements Serializable {
 	
 	private String _name;
 

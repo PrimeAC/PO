@@ -6,6 +6,7 @@ import pt.utl.ist.po.ui.InvalidOperation;
 
 import java.util.*;
 import java.io.*;
+import java.lang.*;
 
 public class Document extends Section implements Serializable {
 
@@ -40,6 +41,38 @@ public class Document extends Section implements Serializable {
 		
 	}
 
+	public Boolean equals(Document doc){
+		
+		Set<String> keys = this.getAuthors().keySet();
+		//System.out.println("entrei no equals");
+		if (this.getFilename().equals(doc.getFilename())){
+			for (TextElement i : _textElement){
+				if (!(i.getContent().equals(doc.getContent()))) {
+					//System.out.println("i.getContent()");
+					return false;
+				}
+			}
+			 
+			for(String i : keys) {
+				
+				try{
+					if (!(this.getAuthors().get(i).equals(doc.getAuthors().get(i)))) {
+						//System.out.println("i.getAuthors()");
+						return false;
+					}
+				}
+				catch (NullPointerException e) {
+					//System.out.println("null pointer exception");
+					return false;
+				}
+			}
+			return true;
+
+		}
+		//System.out.println("filename diferente");
+		return false;
+	}
+
 	public void indexElement(String id , TextElement ele) {
 		ele.setKey(id);
 		_textElement.add(ele);
@@ -51,24 +84,29 @@ public class Document extends Section implements Serializable {
 		_textElement.remove(ele);
 	}
 
-	public void loadDocument() {
+	public Document loadDocument(String filename) {
 
+		Document doc = new Document();
 		try {
 
-			FileInputStream filestream = new FileInputStream(getFilename());
+			FileInputStream filestream = new FileInputStream(filename);
 
 			ObjectInputStream is = new ObjectInputStream(filestream);
 
-			Document doc = new Document();
 			doc = (Document) is.readObject();
 			is.close();
-	
 		}
-		catch(Exception e) {
+		catch(IOException e) {
 			Display display = new Display();
 			display.add(Message.fileNotFound());
 			display.display();
 		}
+		catch(Exception e) {
+			Display display = new Display();
+			display.add("Failed to load file!");
+			display.display();
+		}
+		return doc;		
 }
 
 	public void saveDocument() {
@@ -83,12 +121,16 @@ public class Document extends Section implements Serializable {
 
 			os.close();
 		}
-		catch(Exception e){
+		catch(IOException e){
 			Display display = new Display();
 			display.add("Error at file output stream");
 			display.display();
 		}
-
+		catch(Exception e) {
+			Display display = new Display();
+			display.add("Failed to save file!");
+			display.display();
+		}
 	}
 
 	public String getFilename() {

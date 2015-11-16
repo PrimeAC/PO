@@ -37,13 +37,16 @@ public class SaveDocument extends Command<App> {
 
         app.setDocument(document);
         document = app.getDocument();
+        //System.out.println("Filename:"+entity().getDocument().getFilename());
 
         if(entity().getDocument().getFilename()!=null){   
             String filename = entity().getDocument().getFilename(); 
             document.setFilename(filename);
-            document.loadDocument();
+            
 
-            if(!(entity().getDocument()).equals(app.getDocument())){
+            if(!(entity().getDocument()).equals(document.loadDocument(filename))){
+                //System.out.println("guardei");
+
                 entity().getDocument().saveDocument();
             }
         }
@@ -51,11 +54,9 @@ public class SaveDocument extends Command<App> {
             Form f = new Form();
             InputString inS = new InputString(f, Message.newSaveAs());
             f.parse();
-            if(!(entity().getDocument()).equals(app.getDocument())){
 
-                entity().getDocument().setFilename(inS.value());
-                entity().getDocument().saveDocument();
-            }
+            entity().getDocument().setFilename(inS.value());
+            entity().getDocument().saveDocument();
         }
     }   
 }
