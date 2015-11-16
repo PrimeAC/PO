@@ -6,3 +6,6 @@ all:
 run: 
 	java -cp po-uilib.jar:.:edt-support.jar edt.textui.Editor
 
+clear:
+	find . -name "*.class" -type f -print0 | xargs -0 rm -f
+

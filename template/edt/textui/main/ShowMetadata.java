@@ -4,12 +4,12 @@ import java.util.*;
 import java.lang.*;
 
 import edt.core.App;
+import edt.core.Document;
+import edt.core.Author;
+
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import edt.textui.main.Message;
-import edt.core.Document;
-import edt.core.Author;
-/* FIXME: import core classes here */
 
 /**
  * Command for showing the metadata of the current document in the editor.
@@ -19,7 +19,7 @@ public class ShowMetadata extends Command<App> {
     /**
      * Constructor.
      * 
-     * @param ent the target entity.
+     * @param app the target entity
      */
     public ShowMetadata(App app) {
         super(MenuEntry.SHOW_METADATA, app);
@@ -39,13 +39,11 @@ public class ShowMetadata extends Command<App> {
 
         display.add(Message.documentTitle(doc.getTitle()));
 
-        for(String i : keys) {
+        for (String i : keys) {
             display.addNewLine(Message.author(doc.getAuthors().get(i).getName(), doc.getAuthors().get(i).getEmail()));
         }
 
         display.addNewLine(Message.documentSections(doc.getSubsections().size()));
-
-        //System.out.println(doc.getTitle());
 
         display.addNewLine(Message.documentBytes(doc.getSize()));
 
