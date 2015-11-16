@@ -16,6 +16,7 @@ public class Document extends Section implements Serializable {
 
 	private TreeMap<String, Author> _authors = new TreeMap<>();
 
+	
 	public void addAuthor(Author author) {
 		_authors.put(author.getName(), author); 
 

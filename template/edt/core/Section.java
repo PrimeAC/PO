@@ -32,8 +32,8 @@ public class Section extends TextElement {
 
 		tamanhoParagrafo = 0;
 
-		if(this._title!=null){
-			tamanhoTitulo = this._title.length();
+		if(this.getTitle()!=null){
+			tamanhoTitulo = this.getTitle().length();
 		} 
 		else tamanhoTitulo = 0;
 
@@ -41,7 +41,7 @@ public class Section extends TextElement {
 			tamanhoParagrafo += i.getSize();
 		}
 
-		for (Section i : this._subsection) {
+		for (Section i : this.getSubsections()) {
 			
 			if(this._title!=null){
 				tamanhoTitulo += i._title.length();
@@ -51,9 +51,7 @@ public class Section extends TextElement {
 				tamanhoParagrafo += j.getSize();
 			}
 		}
-
 		return tamanhoParagrafo+tamanhoTitulo;
-
 	}
 
 	public String getTitle(){
@@ -84,7 +82,12 @@ public class Section extends TextElement {
 
 
 	public void addSection(int idx , Section sec) {
-		_subsection.add(idx,sec);
+		if(idx < 0 || idx > _subsection.size()) {
+			_subsection.add(sec);
+		}
+		else {
+			_subsection.add(idx,sec);
+		}
 	}
 
 	public boolean removeSection(int idx , Document doc ) {
@@ -92,7 +95,12 @@ public class Section extends TextElement {
 	}
 
 	public void addParagraph(int idx , Paragraph par) {
-		_paragraph.add(idx,par);
+		if(idx < 0 || idx > _paragraph.size()) {
+			_paragraph.add(par);
+		}
+		else {
+			_paragraph.add(idx,par);
+		}
 	}
 
 	public boolean removeParagraph(int idx , Document doc ) {

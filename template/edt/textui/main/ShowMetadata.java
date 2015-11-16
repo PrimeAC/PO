@@ -45,6 +45,8 @@ public class ShowMetadata extends Command<App> {
 
         display.addNewLine(Message.documentSections(doc.getSubsections().size()));
 
+        //System.out.println(doc.getTitle());
+
         display.addNewLine(Message.documentBytes(doc.getSize()));
 
         display.addNewLine(Message.documentIdentifiers(doc.getTextElement().size()));
