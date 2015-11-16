@@ -22,7 +22,7 @@ public class Document extends Section implements Serializable {
 
 	}
 
-	public List<TextElement> getTextElement(){
+	public List<TextElement> getTextElement() {
 		return _textElement;
 	}
 
@@ -33,44 +33,40 @@ public class Document extends Section implements Serializable {
 
 	public TextElement getTextElement(String id) {
 
-		for(TextElement i : _textElement){
-			if(i.getKey().equals(id)){
+		for (TextElement i : _textElement) {
+			if (i.getKey().equals(id)) {
 				return i;
 			}
 		}
 		return null;
-		
 	}
 
-	public Boolean equals(Document doc){
-		
+	public Boolean equals(Document doc) {
 		Set<String> keys = this.getAuthors().keySet();
-		//System.out.println("entrei no equals");
-		if (this.getFilename().equals(doc.getFilename())){
-			for (TextElement i : _textElement){
+		
+		if (this.getFilename().equals(doc.getFilename())) {
+
+			for (TextElement i : _textElement) {
+
 				if (!(i.getContent().equals(doc.getContent()))) {
-					//System.out.println("i.getContent()");
 					return false;
 				}
 			}
 			 
-			for(String i : keys) {
+			for (String i : keys) {
 				
-				try{
+				try {
 					if (!(this.getAuthors().get(i).equals(doc.getAuthors().get(i)))) {
-						//System.out.println("i.getAuthors()");
 						return false;
 					}
 				}
+
 				catch (NullPointerException e) {
-					//System.out.println("null pointer exception");
 					return false;
 				}
 			}
 			return true;
-
 		}
-		//System.out.println("filename diferente");
 		return false;
 	}
 
@@ -79,15 +75,18 @@ public class Document extends Section implements Serializable {
 		_textElement.add(ele);
 	}
 
-	//public String getHeadLine() {}
+	/*public String getHeadLine() {
+		this.getHeadLine();
+	}*/
 
 	public void removeFromIndex(TextElement ele) {
 		_textElement.remove(ele);
 	}
 
 	public Document loadDocument(String filename) {
-
+		Display display = new Display();
 		Document doc = new Document();
+
 		try {
 
 			FileInputStream filestream = new FileInputStream(filename);
@@ -97,38 +96,39 @@ public class Document extends Section implements Serializable {
 			doc = (Document) is.readObject();
 			is.close();
 		}
+
 		catch(IOException e) {
-			Display display = new Display();
-			display.add(Message.fileNotFound());
+			display.add(Message.fileNotFound(filename));
 			display.display();
 		}
+
 		catch(Exception e) {
-			Display display = new Display();
 			display.add("Failed to load file!");
 			display.display();
 		}
+
 		return doc;		
 }
 
 	public void saveDocument() {
+		Display display = new Display();
 
-		try{
+		try {
 
 			FileOutputStream filestream = new FileOutputStream(getFilename());
 
 			ObjectOutputStream os = new ObjectOutputStream(filestream);
 
 			os.writeObject(this);
-
 			os.close();
 		}
-		catch(IOException e){
-			Display display = new Display();
+
+		catch(IOException e) {
 			display.add("Error at file output stream");
 			display.display();
 		}
+
 		catch(Exception e) {
-			Display display = new Display();
 			display.add("Failed to save file!");
 			display.display();
 		}
@@ -137,8 +137,7 @@ public class Document extends Section implements Serializable {
 	public String getFilename() {
 		return _filename;
 	}
-	public void setFilename(String filename ) {
+	public void setFilename(String filename) {
 		_filename=filename;
 	}
-	
 }

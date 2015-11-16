@@ -4,11 +4,11 @@ public class Paragraph {
 	
 	private String _text;
 
-	public Paragraph(String text){
+	public Paragraph(String text) {
 		_text=text;
 	}
 
-	public void setText(String text ) {
+	public void setText(String text) {
 		_text = text;
 	}
 

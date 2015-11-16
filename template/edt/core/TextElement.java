@@ -2,7 +2,7 @@ package edt.core;
 
 import java.io.*;
 
-public abstract class TextElement implements Serializable{
+public abstract class TextElement implements Serializable {
 
 	private String _key;
 
