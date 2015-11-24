@@ -24,10 +24,10 @@ public class Author implements Serializable {
 	public boolean equals(Object obj) {
 		Author objecto = (Author) obj;
 
-		return getEmail().equals(objecto.getEmail()) && getName().equals(objecto.getName());
+		return getName().equals(objecto.getName());
 	}
 
-	public int compareTo(Author author) {
-		return compareTo(author);
+	public boolean compareTo(Author author) {
+		
 	}
 }

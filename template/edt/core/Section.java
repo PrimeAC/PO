@@ -97,7 +97,6 @@ public class Section extends TextElement {
 	 * Gets the title of the section.
 	 * This method gets the title of the section. 
 	 *
-	 * @param title - new title to be set
 	 * @return String - section title
 	 */
 	public String getTitle() {

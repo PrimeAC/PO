@@ -37,14 +37,7 @@ public class OpenDocument extends Command<App> {
         InputString inS = new InputString(f, Message.openFile());
         f.parse();
 
-        App app = new App();
-
-        Document document = new Document();
-
-        app.setDocument(document);
-        document = app.getDocument();
-
-        entity().setDocument(document.loadDocument(inS.value()));
+        entity().setDocument(loadDocument(inS.value()));
     
     }
 }

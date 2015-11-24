@@ -1,6 +1,6 @@
 package edt.core;
 
-public class Paragraph {
+public class Paragraph extends TextElement {
 	
 	private String _text;
 
