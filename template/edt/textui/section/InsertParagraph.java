@@ -1,5 +1,5 @@
 package edt.textui.section;
-import edt.core.App;
+
 import edt.core.Section;
 import edt.core.Paragraph;
 import pt.utl.ist.po.ui.Command;
@@ -13,15 +13,15 @@ import pt.utl.ist.po.ui.InputInteger;
 /**
  * Command for adding a paragraph to the current section.
  */
-public class InsertParagraph extends Command<App> {
+public class InsertParagraph extends Command<Section> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public InsertParagraph(App app) {
-        super(MenuEntry.INSERT_PARAGRAPH, app);
+    public InsertParagraph(Section section) {
+        super(MenuEntry.INSERT_PARAGRAPH, section);
     }
 
     /**
@@ -39,6 +39,6 @@ public class InsertParagraph extends Command<App> {
 
         paragraph = new Paragraph(inS.value()); 
 
-        entity().getDocument().addParagraph(inI.value(), paragraph);
+        entity().addParagraph(inI.value(), paragraph);
     }
 }

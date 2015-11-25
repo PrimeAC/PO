@@ -1,41 +1,10 @@
 *** tests/A-020-002-M-ok.out	2015-11-24 08:56:06.000000000 +0000
---- tests/A-020-002-M-ok.outhyp	2015-11-25 13:49:22.130821672 +0000
+--- tests/A-020-002-M-ok.outhyp	2015-11-25 21:21:47.382956741 +0000
 ***************
-*** 21,107 ****
+*** 52,107 ****
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Identificador da secção: Nova secção activa: '2'.
-! Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: [] {Drama in the Clouds}
-! Obi-Wan never told you what happened to your father.
-! He told me enough! He told me YOU killed him.
-! NOOOOOOOOOOOOOOOOOOO...
-! Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
 ! Escolha uma opção: Número do parágrafo: Menu de Edição
 ! 1 - Mudar título
 ! 2 - Listar secções
@@ -90,9 +59,9 @@
 ! 0 - Sair
 ! Escolha uma opção: 
 \ No newline at end of file
---- 21,24 ----
+--- 52,55 ----
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Identificador da secção: 
+! Escolha uma opção: Número do parágrafo: 
 \ No newline at end of file

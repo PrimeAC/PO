@@ -1,8 +1,10 @@
 package edt.textui.section;
 
+import edt.core.Section;
+import edt.core.Document;
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
-import edt.core.App;
+import edt.core.Section;
 
 import edt.textui.section.*;
 
@@ -21,20 +23,20 @@ public class EditMenu extends Menu {
      * @param doc
      * @param section
      **/
-    public EditMenu(App app) {
+    public EditMenu(Section section, Document document) {
         super(MenuEntry.TITLE,
               new Command<?>[] { 
-                      new ChangeTitle(app),
-                      new ListSections(app),
-                      new ShowSection(app),
-                      new SelectSection(app),
-                      new InsertSection(app),
-                      new IndexSection(app),
-                      new RemoveSection(app),
-                      new InsertParagraph(app),
-                      new IndexParagraph(app),
-                      new ChangeParagraph(app),
-                      new RemoveParagraph(app),
+                      new ChangeTitle(section),
+                      new ListSections(section),
+                      new ShowSection(section),
+                      new SelectSection(section, document),
+                      new InsertSection(section),
+                      new IndexSection(section, document),
+                      new RemoveSection(section, document),
+                      new InsertParagraph(section),
+                      new IndexParagraph(section, document),
+                      new ChangeParagraph(section),
+                      new RemoveParagraph(section, document),
                       });
     }
 }

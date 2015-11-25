@@ -1,61 +1,66 @@
 *** tests/A-015-001-M-ok.out	2015-11-24 08:56:06.000000000 +0000
---- tests/A-015-001-M-ok.outhyp	2015-11-25 13:49:19.658821555 +0000
+--- tests/A-015-001-M-ok.outhyp	2015-11-25 21:21:44.874956768 +0000
 ***************
-*** 21,27 ****
+*** 21,75 ****
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
 ! Escolha uma opção: Identificador da secção: Identificador único: Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
---- 21,27 ----
+! 1 - Mudar título
+! 2 - Listar secções
+! 3 - Mostrar conteúdo
+! 4 - Seleccionar secção
+! 5 - Inserir secção
+! 6 - Nomear secção
+! 7 - Remover secção
+! 8 - Inserir parágrafo
+! 9 - Nomear parágrafo
+! 10 - Alterar parágrafo
+! 11 - Remover parágrafo
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Novo
+! 2 - Abrir
+! 3 - Guardar
+! 4 - Listar meta-informação
+! 5 - Adicionar autor
+! 6 - Listar secções
+! 7 - Mostrar elemento de texto
+! 8 - Editar
+! 0 - Sair
+! Escolha uma opção: {Objects in Space}
+! [U0] {A Walk in the Desert}
+! [] {Patience You Must Have}
+! [] {Drama in the Clouds}
+! Menu Principal
+! 1 - Novo
+! 2 - Abrir
+! 3 - Guardar
+! 4 - Listar meta-informação
+! 5 - Adicionar autor
+! 6 - Listar secções
+! 7 - Mostrar elemento de texto
+! 8 - Editar
+! 0 - Sair
+! Escolha uma opção: {Objects in Space}
+! [U0] {A Walk in the Desert}
+! [] {Patience You Must Have}
+! [] {Drama in the Clouds}
+! Menu Principal
+! 1 - Novo
+! 2 - Abrir
+! 3 - Guardar
+! 4 - Listar meta-informação
+! 5 - Adicionar autor
+! 6 - Listar secções
+! 7 - Mostrar elemento de texto
+! 8 - Editar
+! 0 - Sair
+! Escolha uma opção: 
+\ No newline at end of file
+--- 21,24 ----
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
-***************
-*** 44,75 ****
-  7 - Mostrar elemento de texto
-  8 - Editar
-  0 - Sair
-! Escolha uma opção: {Objects in Space}
-! [U0] {A Walk in the Desert}
-! [] {Patience You Must Have}
-! [] {Drama in the Clouds}
-! Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: {Objects in Space}
-! [U0] {A Walk in the Desert}
-! [] {Patience You Must Have}
-! [] {Drama in the Clouds}
-! Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-  Escolha uma opção: 
-\ No newline at end of file
---- 44,48 ----
-  7 - Mostrar elemento de texto
-  8 - Editar
-  0 - Sair
-! Escolha uma opção: Número inválido!
-  Escolha uma opção: 
+! Escolha uma opção: Identificador da secção: Identificador da secção: 
 \ No newline at end of file

@@ -1,6 +1,5 @@
 package edt.textui.section;
 
-import edt.core.App;
 import edt.core.Section;
 
 import pt.utl.ist.po.ui.Command;
@@ -13,15 +12,15 @@ import pt.utl.ist.po.ui.InputString;
 /**
  * Command for adding a subsection to current section.
  */
-public class InsertSection extends Command<App> {
+public class InsertSection extends Command<Section> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public InsertSection(App app) {
-        super(MenuEntry.INSERT_SECTION, app);
+    public InsertSection(Section section) {
+        super(MenuEntry.INSERT_SECTION, section);
     }
 
     /**
@@ -39,6 +38,6 @@ public class InsertSection extends Command<App> {
 
         section = new Section(inS.value());
 
-        entity().getDocument().addSection(inI.value(), section);
+        entity().addSection(inI.value(), section);
     }
 }

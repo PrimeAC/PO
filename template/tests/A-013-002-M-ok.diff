@@ -1,24 +1,10 @@
 *** tests/A-013-002-M-ok.out	2015-11-24 08:56:06.000000000 +0000
---- tests/A-013-002-M-ok.outhyp	2015-11-25 13:49:19.014821524 +0000
+--- tests/A-013-002-M-ok.outhyp	2015-11-25 21:21:44.210956775 +0000
 ***************
-*** 21,89 ****
+*** 35,89 ****
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Identificador da secção: Nova secção activa: '2'.
-! Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
 ! Escolha uma opção: Identificador da secção: A secção '0' não existe.
 ! Menu de Edição
 ! 1 - Mudar título
@@ -72,7 +58,7 @@
 ! 0 - Sair
 ! Escolha uma opção: 
 \ No newline at end of file
---- 21,24 ----
+--- 35,38 ----
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair

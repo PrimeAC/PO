@@ -28,8 +28,9 @@ public class Document extends Section implements Serializable {
 	}
 
 	public TextElement getTextElement(String id) {
-
+		
 		return _textElement.get(id);
+		
 	}
 
 	public Boolean equals(Document doc) {
@@ -73,12 +74,15 @@ public class Document extends Section implements Serializable {
 		_textElement.put(id, ele);
 	}
 
-	/*public String getHeadLine() {
-		this.getHeadLine();
-	}*/
+	public String getHeadLine() {
+		if (_title == null) {
+			return "{}";
+		}
+
+		return "{"+_title+"}"; 
+	}
 
 	public void removeFromIndex(TextElement ele) {
-		//Set<String> textElementKeys = this.getTextElement().keySet();
 
 		for (String i : _textElement.keySet()) {
 			if (_textElement.get(i).equals(ele)) {

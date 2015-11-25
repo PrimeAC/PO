@@ -1,6 +1,6 @@
 package edt.textui.section;
 
-import edt.core.App;
+import edt.core.Section;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 
@@ -9,15 +9,15 @@ import pt.utl.ist.po.ui.Display;
 /**
  * Command for showing the content of current section.
  */
-public class ShowSection extends Command<App> {
+public class ShowSection extends Command<Section> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public ShowSection(App app) {
-        super(MenuEntry.SHOW_CONTENT, app);
+    public ShowSection(Section section) {
+        super(MenuEntry.SHOW_CONTENT, section);
     }
 
     /**
@@ -29,8 +29,8 @@ public class ShowSection extends Command<App> {
         
         Display display = new Display();
         
-        display.add(entity().getDocument().getHeadLine());//titulo doc 
-        display.addNewLine(entity().getDocument().getContent());//paragrafos e seccoes 
+        display.add(entity().getHeadLine());//titulo doc 
+        display.addNewLine(entity().getContent());//paragrafos e seccoes 
         display.display();
      }
 }

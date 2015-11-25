@@ -1,5 +1,7 @@
 package edt.textui.section;
-import edt.core.App;
+
+import edt.core.Section;
+import edt.core.Document;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
@@ -11,15 +13,18 @@ import pt.utl.ist.po.ui.InputInteger;
 /**
  * Command for indexing ia subsection (nomear secção 2.2.6) the current section .
  */
-public class IndexSection extends Command<App> {
+public class IndexSection extends Command<Section> {
+
+    private Document _document;
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public IndexSection(App app) {
-        super(MenuEntry.NAME_SECTION, app);
+    public IndexSection(Section section, Document document) {
+        super(MenuEntry.NAME_SECTION, section);
+        _document = document;
     }
 
     /**
@@ -35,12 +40,17 @@ public class IndexSection extends Command<App> {
         InputString inS = new InputString(f, Message.requestSectionId());
         f.parse();
 
-        if (entity().getDocument().getSection(inI.value()) == null){
+        if (_document.getTextElement(inS.value()) != null) {
+            _document.getTextElement(inS.value()).setKey("");
+        }
+
+        System.out.println("X");
+        if (entity().getSection(inI.value()) == null){
             display.add(Message.noSuchSection(inI.value()));
         }
 
         else {
-            entity().getDocument().getSection(inI.value()).setKey(inS.value());
+            entity().getSection(inI.value()).setKey(inS.value());
             display.add(Message.sectionNameChanged());
         }
 

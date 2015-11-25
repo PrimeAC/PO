@@ -1,5 +1,7 @@
 package edt.textui.section;
-import edt.core.App;
+
+import edt.core.Section;
+import edt.core.Document;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
@@ -11,15 +13,18 @@ import pt.utl.ist.po.ui.InputString;
 /**
  * Command for indexing a paragraph (nomear um parágrafo 2.2.9) of the current section.
  */
-public class IndexParagraph extends Command<App> {
+public class IndexParagraph extends Command<Section> {
+
+    private Document _document;
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public IndexParagraph(App app) {
-        super(MenuEntry.NAME_PARAGRAPH, app);
+    public IndexParagraph(Section section, Document document) {
+        super(MenuEntry.NAME_PARAGRAPH, section);
+        _document=document;
     }
 
     /**
@@ -35,12 +40,16 @@ public class IndexParagraph extends Command<App> {
         InputString inS = new InputString(f, Message.requestParagraphId());
         f.parse();
 
-        if (entity().getDocument().getParagraph(inI.value()) == null){
+        if (_document.getTextElement(inS.value()) != null) {
+            _document.getTextElement(inS.value()).setKey("");
+        }
+
+        if (entity().getParagraph(inI.value()) == null){
             display.add(Message.noSuchParagraph(inI.value()));
         }
 
         else {
-            entity().getDocument().getParagraph(inI.value()).setKey(inS.value());
+            entity().getParagraph(inI.value()).setKey(inS.value());
             display.add(Message.paragraphNameChanged());
         }
 

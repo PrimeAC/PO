@@ -1,8 +1,7 @@
 package edt.textui.section;
 
-import edt.core.App;
-import edt.core.Document;
 import edt.core.Section;
+import edt.core.Document;
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -16,15 +15,18 @@ import edt.textui.main.EditSection;
 /**
  * Command for selecting a subsection of the current section and edit it.
  */
-public class SelectSection extends Command<App> {
+public class SelectSection extends Command<Section> {
+
+    private Document _document;
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public SelectSection(App app) {
-        super(MenuEntry.SELECT_SECTION, app);
+    public SelectSection(Section section, Document document) {
+        super(MenuEntry.SELECT_SECTION, section);
+        _document = document;
     }
 
     /**
@@ -33,21 +35,27 @@ public class SelectSection extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        Document document = new Document();
+        EditMenu menu;
         Display display = new Display();
 
         Form f = new Form();
         InputInteger inI = new InputInteger(f, Message.requestSectionId());
         f.parse();
 
-        document = (Document) entity().getDocument().getSection(inI.value());
+        if (entity().getSection(inI.value()) != null) {
+            display.add(Message.newActiveSection(inI.value()));
+            display.display();
 
-        if ( document != null) {
-            entity().setDocument(document);
-            display.addNewLine(Message.newActiveSection(inI.value()));
+            menu =  new EditMenu(entity().getSection(inI.value()), _document);
+
+            menu.open();
         }
         else {
-            display.addNewLine(Message.noSuchSection(inI.value()));
+            display.add(Message.noSuchSection(inI.value()));
+            display.display();
         }
+
+        
+        
     }
 }

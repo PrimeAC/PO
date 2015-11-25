@@ -1,7 +1,7 @@
 *** tests/A-004-006-M-ok.out	2015-11-24 08:56:06.000000000 +0000
---- tests/A-004-006-M-ok.outhyp	2015-11-25 13:49:15.898821376 +0000
+--- tests/A-004-006-M-ok.outhyp	2015-11-25 21:21:40.950956809 +0000
 ***************
-*** 31,64 ****
+*** 31,111 ****
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
@@ -33,39 +33,31 @@
 ! 11 - Remover parágrafo
 ! 0 - Sair
 ! Escolha uma opção: Identificador da secção: Identificador único: Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
---- 31,37 ----
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
+! 1 - Mudar título
+! 2 - Listar secções
+! 3 - Mostrar conteúdo
+! 4 - Seleccionar secção
+! 5 - Inserir secção
+! 6 - Nomear secção
+! 7 - Remover secção
+! 8 - Inserir parágrafo
+! 9 - Nomear parágrafo
+! 10 - Alterar parágrafo
+! 11 - Remover parágrafo
+! 0 - Sair
 ! Escolha uma opção: Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
-***************
-*** 71,77 ****
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
-! Escolha uma opção: Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
---- 44,50 ----
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
-! Escolha uma opção: Título da secção: Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
-***************
-*** 84,111 ****
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
+! 1 - Mudar título
+! 2 - Listar secções
+! 3 - Mostrar conteúdo
+! 4 - Seleccionar secção
+! 5 - Inserir secção
+! 6 - Nomear secção
+! 7 - Remover secção
+! 8 - Inserir parágrafo
+! 9 - Nomear parágrafo
+! 10 - Alterar parágrafo
+! 11 - Remover parágrafo
+! 0 - Sair
 ! Escolha uma opção: Menu Principal
 ! 1 - Novo
 ! 2 - Abrir
@@ -92,9 +84,9 @@
 ! 0 - Sair
 ! Escolha uma opção: 
 \ No newline at end of file
---- 57,60 ----
+--- 31,34 ----
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Identificador da secção: 
+! Escolha uma opção: Identificador da secção: Identificador da secção: 
 \ No newline at end of file

@@ -30,7 +30,7 @@ public class EditSection extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() {
 
-        EditMenu menu = new EditMenu(entity());
+        EditMenu menu = new EditMenu(entity().getDocument(), entity().getDocument());
 
         menu.open();
         

@@ -1,6 +1,7 @@
 package edt.textui.section;
 
-import edt.core.App;
+import edt.core.Section;
+import edt.core.Document;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
@@ -11,15 +12,17 @@ import pt.utl.ist.po.ui.InputInteger;
 /**
  * Command for removing a paragraph of the current section.
  */
-public class RemoveParagraph extends Command<App> {
+public class RemoveParagraph extends Command<Section> {
 
+    private Document _document;
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public RemoveParagraph(App app) {
-        super(MenuEntry.REMOVE_PARAGRAPH, app);
+    public RemoveParagraph(Section section, Document document) {
+        super(MenuEntry.REMOVE_PARAGRAPH, section);
+        _document = document;
     }
 
     /**
@@ -33,6 +36,6 @@ public class RemoveParagraph extends Command<App> {
         InputInteger inI = new InputInteger(f, Message.requestParagraphId());
         f.parse();
 
-        entity().getDocument().removeParagraph(inI.value(), entity().getDocument());
+        entity().removeParagraph(inI.value(), _document);
     }
 }

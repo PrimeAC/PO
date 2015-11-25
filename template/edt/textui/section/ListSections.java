@@ -1,6 +1,6 @@
 package edt.textui.section;
 
-import edt.core.App;
+import edt.core.Section;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 
@@ -9,15 +9,15 @@ import pt.utl.ist.po.ui.Display;
 /**
  * Command for listing all subsections of the current section.
  */
-public class ListSections extends Command<App> {
+public class ListSections extends Command<Section> {
 
     /**
      * Constructor.
      * 
      * @param ent the target entity.
      */
-    public ListSections(App app) {
-        super(MenuEntry.LIST_SECTIONS, app);
+    public ListSections(Section section) {
+        super(MenuEntry.LIST_SECTIONS, section);
     }
 
     /**
@@ -26,7 +26,10 @@ public class ListSections extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        
+        Display display = new Display();
+
+        display.add(entity().getAllTitles());
+        display.display();
         
     }
 }

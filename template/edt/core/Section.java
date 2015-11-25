@@ -15,7 +15,7 @@ public class Section extends TextElement {
 	/**
 	* A string that stores the title of the given section
 	*/
-	private String _title;
+	protected String _title="";
 
 	/**
 	* This ArrayList stores all the paragraphs in the given section
@@ -51,11 +51,27 @@ public class Section extends TextElement {
 	 * @return String - title between braces
 	 */
 	public String getHeadLine() {
-		if (_title == null) {
-			return "{}";
+		if (getKey() == null) {
+			return "[] " + "{"+_title+"}";
+		}
+		else {
+			return "["+getKey()+"] {"+_title+"}"; 
+		}
+	}
+
+	public String getAllTitles() {
+		String titles="";
+
+		if (getTitle() != "") {
+			titles += getHeadLine()+"\n";
 		}
 
-		return "{"+_title+"}"; 
+		if (_subsection != null) {
+			for (Section i : _subsection) {
+				titles += i.getAllTitles();
+			}	
+		}
+		return titles;	
 	}
 
 	/**
