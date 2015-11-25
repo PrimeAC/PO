@@ -28,6 +28,11 @@ public class RemoveSection extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        
+        Form f = new Form();
+        InputInteger inI = new InputInteger(f, Message.requestSectionId());
+        f.parse();
+
+        entity().getDocument().removeSection(inI.value(), entity().getDocument());
     }
 }

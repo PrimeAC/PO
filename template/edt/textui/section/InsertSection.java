@@ -1,6 +1,8 @@
 package edt.textui.section;
 
 import edt.core.App;
+import edt.core.Section;
+
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputInteger;
@@ -28,6 +30,15 @@ public class InsertSection extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        Section section;
+
+        Form f = new Form();
+        InputInteger inI = new InputInteger(f, Message.requestSectionId());
+        InputString inS = new InputString(f, Message.requestSectionTitle());
+        f.parse();
+
+        section = new Section(inS.value());
+
+        entity().getDocument().addSection(inI.value(), section);
     }
 }

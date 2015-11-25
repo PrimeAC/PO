@@ -1,6 +1,8 @@
 package edt.textui.section;
 
 import edt.core.App;
+import edt.core.Document;
+import edt.core.Section;
 import pt.utl.ist.po.ui.Menu;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -31,6 +33,21 @@ public class SelectSection extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        Document document = new Document();
+        Display display = new Display();
+
+        Form f = new Form();
+        InputInteger inI = new InputInteger(f, Message.requestSectionId());
+        f.parse();
+
+        document = (Document) entity().getDocument().getSection(inI.value());
+
+        if ( document != null) {
+            entity().setDocument(document);
+            display.addNewLine(Message.newActiveSection(inI.value()));
+        }
+        else {
+            display.addNewLine(Message.noSuchSection(inI.value()));
+        }
     }
 }

@@ -1,5 +1,7 @@
 package edt.textui.section;
 import edt.core.App;
+import edt.core.Section;
+import edt.core.Paragraph;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
@@ -28,6 +30,15 @@ public class InsertParagraph extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        Paragraph paragraph;
+
+        Form f = new Form();
+        InputInteger inI = new InputInteger(f, Message.requestParagraphId());
+        InputString inS = new InputString(f, Message.requestParagraphContent());
+        f.parse();
+
+        paragraph = new Paragraph(inS.value()); 
+
+        entity().getDocument().addParagraph(inI.value(), paragraph);
     }
 }

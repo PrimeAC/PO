@@ -27,5 +27,6 @@ public class ListSections extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() {
         
+        
     }
 }

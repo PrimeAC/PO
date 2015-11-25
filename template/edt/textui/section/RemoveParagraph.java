@@ -28,6 +28,11 @@ public class RemoveParagraph extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        
+        Form f = new Form();
+        InputInteger inI = new InputInteger(f, Message.requestParagraphId());
+        f.parse();
+
+        entity().getDocument().removeParagraph(inI.value(), entity().getDocument());
     }
 }
