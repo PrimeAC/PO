@@ -31,11 +31,12 @@ public class SaveDocument extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() throws InvalidOperation {
+        Document document = new Document();
 
         if (entity().getDocument().getFilename()!=null) {   
             String filename = entity().getDocument().getFilename(); 
             
-            if (!(entity().getDocument()).equals(loadDocument(filename))) {
+            if (!(entity().getDocument()).equals(document.loadDocument(filename))) {
                 entity().getDocument().saveDocument();
             }
         }

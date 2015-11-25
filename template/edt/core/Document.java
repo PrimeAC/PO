@@ -33,18 +33,25 @@ public class Document extends Section implements Serializable {
 	}
 
 	public Boolean equals(Document doc) {
-		Set<String> keys = this.getAuthors().keySet();
+		Set<String> authorKeys = this.getAuthors().keySet();
 		
 		if (this.getFilename().equals(doc.getFilename())) {
 
-			for (TextElement i : _textElement) {
+			for (String i : _textElement.keySet()) {
 
-				if (!(i.getContent().equals(doc.getContent()))) {
+				try {
+					if (!(this.getTextElement().get(i).equals(doc.getTextElement().get(i)))) {
+						return false;
+					}
+				}
+
+				catch (NullPointerException e) {
 					return false;
 				}
+				
 			}
 			 
-			for (String i : keys) {
+			for (String i : authorKeys) {
 				
 				try {
 					if (!(this.getAuthors().get(i).equals(doc.getAuthors().get(i)))) {
@@ -71,9 +78,11 @@ public class Document extends Section implements Serializable {
 	}*/
 
 	public void removeFromIndex(TextElement ele) {
-		for (TextElement i : _textElement) {
-			if (i.getContent().equals(ele)) {
-				_textElement.remove(i.getKey());
+		//Set<String> textElementKeys = this.getTextElement().keySet();
+
+		for (String i : _textElement.keySet()) {
+			if (_textElement.get(i).equals(ele)) {
+				_textElement.remove(i);
 				break;
 			}
 		}
@@ -101,7 +110,7 @@ public class Document extends Section implements Serializable {
 		}
 
 		return doc;		
-}
+	}
 
 	public void saveDocument() {
 

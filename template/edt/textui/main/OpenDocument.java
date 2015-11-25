@@ -32,12 +32,13 @@ public class OpenDocument extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() throws InvalidOperation {
-        
+        Document document = new Document();
+
         Form f = new Form();
         InputString inS = new InputString(f, Message.openFile());
         f.parse();
 
-        entity().setDocument(loadDocument(inS.value()));
+        entity().setDocument(document.loadDocument(inS.value()));
     
     }
 }

@@ -28,6 +28,6 @@ public class Author implements Serializable {
 	}
 
 	public boolean compareTo(Author author) {
-		
+		return true;
 	}
 }

@@ -26,6 +26,6 @@ public class ListSections extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        
     }
 }
