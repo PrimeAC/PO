@@ -116,7 +116,7 @@ public class Section extends TextElement {
 	public String getContent() {
 		String content = "";
 		for (Paragraph i : this._paragraph) {
-			content += i.getContent(); 
+			content += i.getContent()+"\n"; 
 		}
 		for (Section i : this.getSubsections()) {
 			content += i.getContent();

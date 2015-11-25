@@ -1,0 +1,14 @@
+*** tests/A-012-001-M-ok.out	2015-11-24 08:56:06.000000000 +0000
+--- tests/A-012-001-M-ok.outhyp	2015-11-25 13:49:18.386821494 +0000
+***************
+*** 23,31 ****
+  0 - Sair
+  Escolha uma opção: {Objects in Space}
+  First Paragraph
+- [] {A Walk in the Desert}
+- [] {Patience You Must Have}
+- [] {Drama in the Clouds}
+  Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+--- 23,28 ----

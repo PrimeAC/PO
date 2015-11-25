@@ -28,6 +28,22 @@ public class IndexSection extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        Display display = new Display();
+
+        Form f = new Form();
+        InputInteger inI = new InputInteger(f, Message.requestSectionId());
+        InputString inS = new InputString(f, Message.requestSectionId());
+        f.parse();
+
+        if (entity().getDocument().getSection(inI.value()) == null){
+            display.add(Message.noSuchSection(inI.value()));
+        }
+
+        else {
+            entity().getDocument().getSection(inI.value()).setKey(inS.value());
+            display.add(Message.sectionNameChanged());
+        }
+
+        display.display();
     }
 }

@@ -1,0 +1,23 @@
+*** tests/A-014-002-M-ok.out	2015-11-24 08:56:06.000000000 +0000
+--- tests/A-014-002-M-ok.outhyp	2015-11-25 13:49:19.338821539 +0000
+***************
+*** 57,67 ****
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: [] {A Walk in the Desert}
+! [] {Sec 2}
+! [] {Patience You Must Have}
+! [] {Drama in the Clouds}
+! Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+--- 57,63 ----
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo

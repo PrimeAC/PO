@@ -1,0 +1,20 @@
+*** tests/A-009-002-M-ok.out	2015-11-24 08:56:06.000000000 +0000
+--- tests/A-009-002-M-ok.outhyp	2015-11-25 13:49:17.262821441 +0000
+***************
+*** 8,15 ****
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: [s1] {A Walk in the Desert}
+! Somewhere in space
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+--- 8,14 ----
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: Somewhere in space
+  Menu Principal
+  1 - Novo
+  2 - Abrir

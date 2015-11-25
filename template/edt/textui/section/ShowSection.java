@@ -26,6 +26,11 @@ public class ShowSection extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        
+        Display display = new Display();
+        
+        display.add(entity().getDocument().getHeadLine());//titulo doc 
+        display.addNewLine(entity().getDocument().getContent());//paragrafos e seccoes 
+        display.display();
      }
 }

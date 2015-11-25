@@ -28,6 +28,22 @@ public class IndexParagraph extends Command<App> {
     @Override
     @SuppressWarnings("nls")
     public final void execute() {
-        /* FIXME: implement command */
+        Display display = new Display();
+
+        Form f = new Form();
+        InputInteger inI = new InputInteger(f, Message.requestParagraphId());
+        InputString inS = new InputString(f, Message.requestParagraphId());
+        f.parse();
+
+        if (entity().getDocument().getParagraph(inI.value()) == null){
+            display.add(Message.noSuchParagraph(inI.value()));
+        }
+
+        else {
+            entity().getDocument().getParagraph(inI.value()).setKey(inS.value());
+            display.add(Message.paragraphNameChanged());
+        }
+
+        display.display();
     }
 }
