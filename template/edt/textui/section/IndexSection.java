@@ -40,11 +40,10 @@ public class IndexSection extends Command<Section> {
         InputString inS = new InputString(f, Message.requestSectionId());
         f.parse();
 
-        if (_document.getTextElement(inS.value()) != null) {
+        if (_document.getTextElement().containsKey(inS.value())) {
             _document.getTextElement(inS.value()).setKey("");
         }
 
-        System.out.println("X");
         if (entity().getSection(inI.value()) == null){
             display.add(Message.noSuchSection(inI.value()));
         }

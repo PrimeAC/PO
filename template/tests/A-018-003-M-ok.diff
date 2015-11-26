@@ -1,151 +1,89 @@
-*** tests/A-018-003-M-ok.out	2015-11-24 08:56:06.000000000 +0000
---- tests/A-018-003-M-ok.outhyp	2015-11-25 21:21:46.782956748 +0000
+*** tests/A-018-003-M-ok.out	2015-11-26 20:23:19.234358235 +0000
+--- tests/A-018-003-M-ok.outhyp	2015-11-26 20:24:58.390359718 +0000
 ***************
-*** 35,174 ****
+*** 35,41 ****
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
 ! Escolha uma opção: Número do parágrafo: Identificador único: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: Identificador do elemento de texto: These aren’t the droids you’re looking for.
-! Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Identificador da secção: Nova secção activa: '2'.
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+--- 35,42 ----
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Número do parágrafo: Número do parágrafo: O nome do parágrafo foi alterado.
 ! Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Número do parágrafo: Identificador único: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: Identificador do elemento de texto: NOOOOOOOOOOOOOOOOOOO...
-! Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: Título: Objects in Space
-! Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
-! Secções de topo: 3
-! Dimensão do documento (bytes): 294
-! Identificadores únicos: 3
-! Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: 
-\ No newline at end of file
---- 35,38 ----
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+***************
+*** 71,77 ****
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: These aren’t the droids you’re looking for.
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+--- 72,78 ----
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: O elemento de texto 'P1' não existe.
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+***************
+*** 109,115 ****
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Número do parágrafo: Número do parágrafo: 
-\ No newline at end of file
+! Escolha uma opção: Número do parágrafo: Identificador único: Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+--- 110,117 ----
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Número do parágrafo: Número do parágrafo: O nome do parágrafo foi alterado.
+! Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+***************
+*** 145,151 ****
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: NOOOOOOOOOOOOOOOOOOO...
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+--- 147,153 ----
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: O elemento de texto 'P1' não existe.
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+***************
+*** 160,166 ****
+  Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
+  Secções de topo: 3
+  Dimensão do documento (bytes): 294
+! Identificadores únicos: 3
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+--- 162,168 ----
+  Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
+  Secções de topo: 3
+  Dimensão do documento (bytes): 294
+! Identificadores únicos: 2
+  Menu Principal
+  1 - Novo
+  2 - Abrir

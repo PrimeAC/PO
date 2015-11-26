@@ -1,49 +1,37 @@
-*** tests/A-009-001-M-ok.out	2015-11-24 08:56:06.000000000 +0000
---- tests/A-009-001-M-ok.outhyp	2015-11-25 21:21:42.222956795 +0000
+*** tests/A-009-001-M-ok.out	2015-11-26 20:23:19.222358235 +0000
+--- tests/A-009-001-M-ok.outhyp	2015-11-26 20:24:54.366359657 +0000
 ***************
-*** 21,58 ****
+*** 21,27 ****
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
 ! Escolha uma opção: Número do parágrafo: Identificador único: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: Identificador do elemento de texto: It is the force!
-! Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: 
-\ No newline at end of file
---- 21,24 ----
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+--- 21,28 ----
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Número do parágrafo: Número do parágrafo: 
-\ No newline at end of file
+! Escolha uma opção: Número do parágrafo: Número do parágrafo: O nome do parágrafo foi alterado.
+! Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+***************
+*** 44,50 ****
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: It is the force!
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+--- 45,51 ----
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: O elemento de texto 'p1' não existe.
+  Menu Principal
+  1 - Novo
+  2 - Abrir

@@ -40,7 +40,7 @@ public class IndexParagraph extends Command<Section> {
         InputString inS = new InputString(f, Message.requestParagraphId());
         f.parse();
 
-        if (_document.getTextElement(inS.value()) != null) {
+        if (_document.getTextElement().containsKey(inS.value())) {
             _document.getTextElement(inS.value()).setKey("");
         }
 
