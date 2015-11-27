@@ -1,15 +1,7 @@
 *** tests/A-018-002-M-ok.out	2015-11-26 20:23:19.234358235 +0000
---- tests/A-018-002-M-ok.outhyp	2015-11-27 11:48:06.501224112 +0000
+--- tests/A-018-002-M-ok.outhyp	2015-11-27 18:44:57.614263937 +0000
 ***************
-*** 71,77 ****
-  7 - Mostrar elemento de texto
-  8 - Editar
-  0 - Sair
-! Escolha uma opção: Identificador do elemento de texto: Where are they?
-  Menu Principal
-  1 - Novo
-  2 - Abrir
---- 71,77 ----
+*** 182,188 ****
   7 - Mostrar elemento de texto
   8 - Editar
   0 - Sair
@@ -17,37 +9,11 @@
   Menu Principal
   1 - Novo
   2 - Abrir
-***************
-*** 137,150 ****
-  11 - Remover parágrafo
-  0 - Sair
-  Escolha uma opção: {Objects in Space}
-- [] {A Walk in the Desert}
-  These aren’t the droids you’re looking for.
-  Where are they?
-  Who knows?
-- [] {Patience You Must Have}
-  Do or do not.
-  There is no try.
-- [] {Drama in the Clouds}
-  Obi-Wan never told you what happened to your father.
-  He told me enough! He told me YOU killed him.
-  NOOOOOOOOOOOOOOOOOOO...
---- 137,147 ----
-***************
-*** 171,177 ****
+--- 182,188 ----
   7 - Mostrar elemento de texto
   8 - Editar
   0 - Sair
 ! Escolha uma opção: Identificador do elemento de texto: Where are they?
-  Menu Principal
-  1 - Novo
-  2 - Abrir
---- 168,174 ----
-  7 - Mostrar elemento de texto
-  8 - Editar
-  0 - Sair
-! Escolha uma opção: Identificador do elemento de texto: O elemento de texto 'NP1.2' não existe.
   Menu Principal
   1 - Novo
   2 - Abrir
@@ -60,11 +26,11 @@
   Menu Principal
   1 - Novo
   2 - Abrir
---- 194,200 ----
+--- 197,203 ----
   Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
   Secções de topo: 3
   Dimensão do documento (bytes): 294
-! Identificadores únicos: 0
+! Identificadores únicos: 2
   Menu Principal
   1 - Novo
   2 - Abrir

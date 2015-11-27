@@ -1,5 +1,5 @@
 *** tests/A-016-001-M-ok.out	2015-11-26 20:23:19.230358235 +0000
---- tests/A-016-001-M-ok.outhyp	2015-11-27 11:48:05.189224050 +0000
+--- tests/A-016-001-M-ok.outhyp	2015-11-27 18:44:56.386263879 +0000
 ***************
 *** 58,64 ****
   10 - Alterar parágrafo
@@ -9,32 +9,20 @@
   Menu de Edição
   1 - Mudar título
   2 - Listar secções
---- 58,66 ----
+--- 58,65 ----
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: [] {Patience You Must Have}
-! [] {Sub 1.1}
+! Escolha uma opção: [] {Sub 1.1}
 ! [] {Sub 1.2}
   Menu de Edição
   1 - Mudar título
   2 - Listar secções
 ***************
-*** 85,92 ****
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
+*** 87,92 ****
+--- 88,94 ----
   0 - Sair
-! Escolha uma opção: [] {A Walk in the Desert}
-  [] {Patience You Must Have}
-  [] {Sub 1.2}
-  [] {Drama in the Clouds}
-  [] {Sub 2.1}
---- 87,96 ----
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
-! Escolha uma opção: {Objects in Space}
-! [] {A Walk in the Desert}
+  Escolha uma opção: [] {A Walk in the Desert}
   [] {Patience You Must Have}
 + [] {Sub 1.1}
   [] {Sub 1.2}

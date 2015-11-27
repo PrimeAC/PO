@@ -29,7 +29,6 @@ public class ShowSection extends Command<Section> {
         
         Display display = new Display();
         
-        display.add(entity().getHeadLine());//titulo doc 
         display.addNewLine(entity().getContent());//paragrafos e seccoes 
         display.display();
      }

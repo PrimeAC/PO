@@ -3,6 +3,7 @@ package edt.textui.main;
 import edt.core.App;
 import edt.core.Document;
 import edt.core.TextElement;
+import edt.core.Section;
 
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -37,7 +38,8 @@ public class ShowTextElement extends Command<App> {
         InputString inS = new InputString(f, Message.requestElementId());
         f.parse();
 
-        if (entity().getDocument().getTextElement(inS.value())!=null) {
+        if (entity().getDocument().getTextElement().containsKey(inS.value())) {
+
             display.add(entity().getDocument().getTextElement(inS.value()).getContent());
         }
         else {

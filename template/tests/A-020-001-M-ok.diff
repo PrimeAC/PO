@@ -1,26 +1,8 @@
 *** tests/A-020-001-M-ok.out	2015-11-26 20:23:19.234358235 +0000
---- tests/A-020-001-M-ok.outhyp	2015-11-27 11:48:07.197224145 +0000
-***************
-*** 48,54 ****
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
-! Escolha uma opção: Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
---- 48,55 ----
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
-! Escolha uma opção: [] {Drama in the Clouds}
-! Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
+--- tests/A-020-001-M-ok.outhyp	2015-11-27 18:44:58.278263969 +0000
 ***************
 *** 62,67 ****
---- 63,69 ----
+--- 62,68 ----
   11 - Remover parágrafo
   0 - Sair
   Escolha uma opção: [] {Drama in the Clouds}
@@ -29,27 +11,12 @@
   NOOOOOOOOOOOOOOOOOOO...
   Menu de Edição
 ***************
-*** 91,102 ****
-  11 - Remover parágrafo
-  0 - Sair
-  Escolha uma opção: {Objects in Space}
-- [] {A Walk in the Desert}
-  These aren’t the droids you’re looking for.
-- [] {Patience You Must Have}
+*** 97,102 ****
+--- 98,104 ----
   Do or do not.
   There is no try.
-! [] {Drama in the Clouds}
-  He told me enough! He told me YOU killed him.
-  NOOOOOOOOOOOOOOOOOOO...
-  Menu de Edição
---- 93,102 ----
-  11 - Remover parágrafo
-  0 - Sair
-  Escolha uma opção: {Objects in Space}
-  These aren’t the droids you’re looking for.
-  Do or do not.
-  There is no try.
-! Obi-Wan never told you what happened to your father.
+  [] {Drama in the Clouds}
++ Obi-Wan never told you what happened to your father.
   He told me enough! He told me YOU killed him.
   NOOOOOOOOOOOOOOOOOOO...
   Menu de Edição

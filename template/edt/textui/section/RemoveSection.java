@@ -38,5 +38,6 @@ public class RemoveSection extends Command<Section> {
         f.parse();
 
         entity().removeSection(inI.value(), _document);
+        _document.removeFromIndex(entity().getSection(inI.value()));
     }
 }

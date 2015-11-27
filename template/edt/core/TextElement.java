@@ -7,7 +7,7 @@ public abstract class TextElement implements Serializable {
 	private String _key;
 
 	public String getKey() {
-		if (_key==null) {
+		if (_key == null) {
 			return "";
 		}
 		else {
@@ -16,7 +16,7 @@ public abstract class TextElement implements Serializable {
 	}
 
 	public void setKey(String key) {
-		_key= key;
+		_key = key;
 	}
 
 	//protected boolean isIndexed() {}

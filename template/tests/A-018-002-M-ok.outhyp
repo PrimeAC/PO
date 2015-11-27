@@ -71,7 +71,7 @@ Escolha uma opção: Menu Principal
 7 - Mostrar elemento de texto
 8 - Editar
 0 - Sair
-Escolha uma opção: Identificador do elemento de texto: O elemento de texto 'P1.2' não existe.
+Escolha uma opção: Identificador do elemento de texto: Where are they?
 Menu Principal
 1 - Novo
 2 - Abrir
@@ -137,11 +137,14 @@ Escolha uma opção: Menu de Edição
 11 - Remover parágrafo
 0 - Sair
 Escolha uma opção: {Objects in Space}
+[] {A Walk in the Desert}
 These aren’t the droids you’re looking for.
 Where are they?
 Who knows?
+[] {Patience You Must Have}
 Do or do not.
 There is no try.
+[] {Drama in the Clouds}
 Obi-Wan never told you what happened to your father.
 He told me enough! He told me YOU killed him.
 NOOOOOOOOOOOOOOOOOOO...
@@ -168,7 +171,7 @@ Escolha uma opção: Menu Principal
 7 - Mostrar elemento de texto
 8 - Editar
 0 - Sair
-Escolha uma opção: Identificador do elemento de texto: O elemento de texto 'NP1.2' não existe.
+Escolha uma opção: Identificador do elemento de texto: Where are they?
 Menu Principal
 1 - Novo
 2 - Abrir
@@ -179,7 +182,7 @@ Menu Principal
 7 - Mostrar elemento de texto
 8 - Editar
 0 - Sair
-Escolha uma opção: Identificador do elemento de texto: O elemento de texto 'P1.2' não existe.
+Escolha uma opção: Identificador do elemento de texto: Where are they?
 Menu Principal
 1 - Novo
 2 - Abrir
@@ -194,7 +197,7 @@ Escolha uma opção: Título: Objects in Space
 Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
 Secções de topo: 3
 Dimensão do documento (bytes): 294
-Identificadores únicos: 0
+Identificadores únicos: 2
 Menu Principal
 1 - Novo
 2 - Abrir

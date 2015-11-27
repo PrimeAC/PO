@@ -28,7 +28,7 @@ public class ListSections extends Command<Section> {
     public final void execute() {
         Display display = new Display();
 
-        display.add(entity().getAllTitles());
+        display.add(entity().getAllTitles(0));
         display.display();
         
     }

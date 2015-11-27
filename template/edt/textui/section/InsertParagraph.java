@@ -2,6 +2,7 @@ package edt.textui.section;
 
 import edt.core.Section;
 import edt.core.Paragraph;
+
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
@@ -40,5 +41,6 @@ public class InsertParagraph extends Command<Section> {
         paragraph = new Paragraph(inS.value()); 
 
         entity().addParagraph(inI.value(), paragraph);
+
     }
 }

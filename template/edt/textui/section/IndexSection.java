@@ -53,10 +53,12 @@ public class IndexSection extends Command<Section> {
 
         if (entity().getSection(inI.value()).getKey().equals("")) {
             entity().getSection(inI.value()).setKey(inS.value());
+            _document.getTextElement().put(inS.value(),entity().getSection(inI.value()));
             return;
         }
 
         entity().getSection(inI.value()).setKey(inS.value());
+        _document.getTextElement().put(inS.value(),entity().getSection(inI.value()));
         display.add(Message.sectionNameChanged());
 
         display.display();

@@ -1,7 +1,7 @@
 package edt.textui.section;
 
 import edt.core.Section;
-
+import edt.core.Document;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputInteger;

@@ -42,6 +42,8 @@ public class IndexParagraph extends Command<Section> {
 
         if (inI.value()<0 || inI.value()>entity().getParagraph().size()){
             display.add(Message.noSuchParagraph(inI.value()));
+            display.display();
+            return;
         }
 
         if (_document.getTextElement().containsKey(inS.value())) {
@@ -51,10 +53,12 @@ public class IndexParagraph extends Command<Section> {
 
         if (entity().getParagraph(inI.value()).getKey().equals("")) {
             entity().getParagraph(inI.value()).setKey(inS.value());
+            _document.getTextElement().put(inS.value(),entity().getParagraph(inI.value()));
             return;
         }
 
         entity().getParagraph(inI.value()).setKey(inS.value());
+        _document.getTextElement().put(inS.value(),entity().getParagraph(inI.value()));
         display.add(Message.paragraphNameChanged());
 
         display.display();

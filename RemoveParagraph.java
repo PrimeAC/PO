@@ -43,6 +43,5 @@ public class RemoveParagraph extends Command<Section> {
         }
 
         entity().removeParagraph(inI.value(), _document);
-        _document.removeFromIndex(entity().getParagraph(inI.value()));
     }
 }

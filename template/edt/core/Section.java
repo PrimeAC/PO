@@ -59,16 +59,16 @@ public class Section extends TextElement {
 		}
 	}
 
-	public String getAllTitles() {
+	public String getAllTitles(int flag) {
 		String titles="";
 
-		if (getTitle() != "") {
+		if (getTitle() != "" && flag == 1) {
 			titles += getHeadLine()+"\n";
 		}
 
 		if (_subsection != null) {
 			for (Section i : _subsection) {
-				titles += i.getAllTitles();
+				titles += i.getAllTitles(1);
 			}	
 		}
 		return titles;	
@@ -130,7 +130,8 @@ public class Section extends TextElement {
 	 * @return String - section content
 	 */
 	public String getContent() {
-		String content = "";
+		String content = this.getHeadLine()+"\n";
+
 		for (Paragraph i : this._paragraph) {
 			content += i.getContent()+"\n"; 
 		}
