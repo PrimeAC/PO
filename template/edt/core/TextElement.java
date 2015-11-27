@@ -7,7 +7,12 @@ public abstract class TextElement implements Serializable {
 	private String _key;
 
 	public String getKey() {
-		return _key; 
+		if (_key==null) {
+			return "";
+		}
+		else {
+			return _key; 
+		}
 	}
 
 	public void setKey(String key) {

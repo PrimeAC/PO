@@ -5,15 +5,15 @@ import edt.core.Document;
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
-import pt.utl.ist.po.ui.InputInteger;
 import pt.utl.ist.po.ui.InputString;
+import pt.utl.ist.po.ui.InputInteger;
 
 /* FIXME: import core classes here */
 
 /**
- * Command for indexing a paragraph (nomear um parágrafo 2.2.9) of the current section.
+ * Command for indexing ia subsection (nomear secção 2.2.6) the current section .
  */
-public class IndexParagraph extends Command<Section> {
+public class IndexSection extends Command<Section> {
 
     private Document _document;
 
@@ -22,9 +22,9 @@ public class IndexParagraph extends Command<Section> {
      * 
      * @param ent the target entity.
      */
-    public IndexParagraph(Section section, Document document) {
-        super(MenuEntry.NAME_PARAGRAPH, section);
-        _document=document;
+    public IndexSection(Section section, Document document) {
+        super(MenuEntry.NAME_SECTION, section);
+        _document = document;
     }
 
     /**
@@ -36,26 +36,23 @@ public class IndexParagraph extends Command<Section> {
         Display display = new Display();
 
         Form f = new Form();
-        InputInteger inI = new InputInteger(f, Message.requestParagraphId());
+        InputInteger inI = new InputInteger(f, Message.requestSectionId());
         InputString inS = new InputString(f, Message.requestUniqueId());
         f.parse();
-
-        if (inI.value()<0 || inI.value()>entity().getParagraph().size()){
-            display.add(Message.noSuchParagraph(inI.value()));
-        }
 
         if (_document.getTextElement().containsKey(inS.value())) {
             _document.getTextElement(inS.value()).setKey("");
         }
 
-
-        if (entity().getParagraph(inI.value()).getKey().equals("")) {
-            entity().getParagraph(inI.value()).setKey(inS.value());
-            return;
+        if (!(entity().getSection(inI.value()).getKey().equals(""))){//nao esta  a entrar aqui  - isto deve estar mal! Afonso es gay 
+            entity().getSection(inI.value()).setKey(inS.value());
+            display.add(Message.sectionNameChanged());
+        }
+        if (entity().getSection(inI.value()) == null){
+        System.out.println("X");
+            display.add(Message.noSuchSection(inI.value()));
         }
 
-        entity().getParagraph(inI.value()).setKey(inS.value());
-        display.add(Message.paragraphNameChanged());
 
         display.display();
     }

@@ -1,102 +1,55 @@
 *** tests/A-020-001-M-ok.out	2015-11-26 20:23:19.234358235 +0000
---- tests/A-020-001-M-ok.outhyp	2015-11-26 20:24:58.826359724 +0000
+--- tests/A-020-001-M-ok.outhyp	2015-11-27 11:48:07.197224145 +0000
 ***************
-*** 35,125 ****
+*** 48,54 ****
   10 - Alterar parágrafo
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Número do parágrafo: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
 ! Escolha uma opção: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+--- 48,55 ----
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
 ! Escolha uma opção: [] {Drama in the Clouds}
-! He told me enough! He told me YOU killed him.
-! NOOOOOOOOOOOOOOOOOOO...
 ! Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: {Objects in Space}
-! [] {A Walk in the Desert}
-! These aren’t the droids you’re looking for.
-! [] {Patience You Must Have}
-! Do or do not.
-! There is no try.
-! [] {Drama in the Clouds}
-! He told me enough! He told me YOU killed him.
-! NOOOOOOOOOOOOOOOOOOO...
-! Menu de Edição
-! 1 - Mudar título
-! 2 - Listar secções
-! 3 - Mostrar conteúdo
-! 4 - Seleccionar secção
-! 5 - Inserir secção
-! 6 - Nomear secção
-! 7 - Remover secção
-! 8 - Inserir parágrafo
-! 9 - Nomear parágrafo
-! 10 - Alterar parágrafo
-! 11 - Remover parágrafo
-! 0 - Sair
-! Escolha uma opção: Menu Principal
-! 1 - Novo
-! 2 - Abrir
-! 3 - Guardar
-! 4 - Listar meta-informação
-! 5 - Adicionar autor
-! 6 - Listar secções
-! 7 - Mostrar elemento de texto
-! 8 - Editar
-! 0 - Sair
-! Escolha uma opção: 
-\ No newline at end of file
---- 35,38 ----
-  10 - Alterar parágrafo
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+***************
+*** 62,67 ****
+--- 63,69 ----
   11 - Remover parágrafo
   0 - Sair
-! Escolha uma opção: Número do parágrafo: 
-\ No newline at end of file
+  Escolha uma opção: [] {Drama in the Clouds}
++ Obi-Wan never told you what happened to your father.
+  He told me enough! He told me YOU killed him.
+  NOOOOOOOOOOOOOOOOOOO...
+  Menu de Edição
+***************
+*** 91,102 ****
+  11 - Remover parágrafo
+  0 - Sair
+  Escolha uma opção: {Objects in Space}
+- [] {A Walk in the Desert}
+  These aren’t the droids you’re looking for.
+- [] {Patience You Must Have}
+  Do or do not.
+  There is no try.
+! [] {Drama in the Clouds}
+  He told me enough! He told me YOU killed him.
+  NOOOOOOOOOOOOOOOOOOO...
+  Menu de Edição
+--- 93,102 ----
+  11 - Remover parágrafo
+  0 - Sair
+  Escolha uma opção: {Objects in Space}
+  These aren’t the droids you’re looking for.
+  Do or do not.
+  There is no try.
+! Obi-Wan never told you what happened to your father.
+  He told me enough! He told me YOU killed him.
+  NOOOOOOOOOOOOOOOOOOO...
+  Menu de Edição

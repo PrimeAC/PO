@@ -1,23 +1,5 @@
 *** tests/A-018-001-M-ok.out	2015-11-26 20:23:19.230358235 +0000
---- tests/A-018-001-M-ok.outhyp	2015-11-26 20:24:58.114359713 +0000
-***************
-*** 35,41 ****
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
-! Escolha uma opção: Número do parágrafo: Identificador único: Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
---- 35,42 ----
-  10 - Alterar parágrafo
-  11 - Remover parágrafo
-  0 - Sair
-! Escolha uma opção: Número do parágrafo: Número do parágrafo: O nome do parágrafo foi alterado.
-! Menu de Edição
-  1 - Mudar título
-  2 - Listar secções
-  3 - Mostrar conteúdo
+--- tests/A-018-001-M-ok.outhyp	2015-11-27 11:48:06.305224103 +0000
 ***************
 *** 87,93 ****
   7 - Mostrar elemento de texto
@@ -27,7 +9,7 @@
   Menu Principal
   1 - Novo
   2 - Abrir
---- 88,94 ----
+--- 87,93 ----
   7 - Mostrar elemento de texto
   8 - Editar
   0 - Sair
@@ -44,7 +26,7 @@
   Menu Principal
   1 - Novo
   2 - Abrir
---- 99,105 ----
+--- 98,104 ----
   7 - Mostrar elemento de texto
   8 - Editar
   0 - Sair

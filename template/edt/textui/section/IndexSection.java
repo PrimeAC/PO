@@ -37,21 +37,27 @@ public class IndexSection extends Command<Section> {
 
         Form f = new Form();
         InputInteger inI = new InputInteger(f, Message.requestSectionId());
-        InputString inS = new InputString(f, Message.requestSectionId());
+        InputString inS = new InputString(f, Message.requestUniqueId());
         f.parse();
+
+        if (inI.value()<0 || inI.value()>entity().getSubsections().size()){
+            display.add(Message.noSuchSection(inI.value()));
+            display.display();
+            return;
+        }
 
         if (_document.getTextElement().containsKey(inS.value())) {
             _document.getTextElement(inS.value()).setKey("");
+
         }
 
-        if (entity().getSection(inI.value()) == null){
-            display.add(Message.noSuchSection(inI.value()));
-        }
-
-        else {
+        if (entity().getSection(inI.value()).getKey().equals("")) {
             entity().getSection(inI.value()).setKey(inS.value());
-            display.add(Message.sectionNameChanged());
+            return;
         }
+
+        entity().getSection(inI.value()).setKey(inS.value());
+        display.add(Message.sectionNameChanged());
 
         display.display();
     }

@@ -158,7 +158,13 @@ public class Section extends TextElement {
 	 * @return Section - section associated with that index
 	 */
 	public Section getSection(int idx) {
-		return _subsection.get(idx);
+		if(idx>=0 && idx<this.getSubsections().size()){
+			return _subsection.get(idx);
+		}
+		
+		else {
+			return null;
+		}
 	}
 
 	/**
@@ -226,7 +232,13 @@ public class Section extends TextElement {
 	 * @return boolean - result of the removal
 	 */
 	public boolean removeParagraph(int idx, Document doc) {
-		return _paragraph.remove(doc.getParagraph(idx));
+		if(idx>=0 && idx<this.getParagraph().size()){
+		 this.getParagraph().remove(doc.getParagraph(idx));
+		return true;
+		}
+		else {
+			return false ;
+		}
 	}
 
 	/**
@@ -236,7 +248,17 @@ public class Section extends TextElement {
 	 * @param idx - index of the paragraphs array
 	 * @return Paragraph - paragraph associated with that index
 	 */
-	public Paragraph getParagraph(int idx) {
-		return _paragraph.get(idx);
+	public List<Paragraph> getParagraph() {
+		return _paragraph;
 	}
+
+	public Paragraph getParagraph(int idx) {
+		if(idx>=0 && idx<this.getParagraph().size()){
+		return _paragraph.get(idx);
+		}
+		else {
+			return null ;
+		}
+	}
+
 }
