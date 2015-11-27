@@ -1,5 +1,23 @@
 *** tests/A-018-002-M-ok.out	2015-11-26 20:23:19.234358235 +0000
---- tests/A-018-002-M-ok.outhyp	2015-11-27 18:44:57.614263937 +0000
+--- tests/A-018-002-M-ok.outhyp	2015-11-27 20:09:21.958505063 +0000
+***************
+*** 109,116 ****
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Número do parágrafo: Identificador único: O nome do parágrafo foi alterado.
+! Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+--- 109,115 ----
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Número do parágrafo: Identificador único: Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
 ***************
 *** 182,188 ****
   7 - Mostrar elemento de texto
@@ -9,7 +27,7 @@
   Menu Principal
   1 - Novo
   2 - Abrir
---- 182,188 ----
+--- 181,187 ----
   7 - Mostrar elemento de texto
   8 - Editar
   0 - Sair
@@ -26,7 +44,7 @@
   Menu Principal
   1 - Novo
   2 - Abrir
---- 197,203 ----
+--- 196,202 ----
   Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
   Secções de topo: 3
   Dimensão do documento (bytes): 294

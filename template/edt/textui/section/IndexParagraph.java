@@ -46,12 +46,15 @@ public class IndexParagraph extends Command<Section> {
             return;
         }
 
-        if (_document.getTextElement().containsKey(inS.value())) {
-            _document.getTextElement(inS.value()).setKey("");
+        if (entity().getParagraph(inI.value()).getKey().length()>0) {
+            System.out.println(entity().getParagraph(inI.value()).getKey());
+            _document.getTextElement(entity().getParagraph(inI.value()).getKey()).setKey("");
+            entity().getParagraph(inI.value()).setKey("");
+            System.out.println(entity().getParagraph(inI.value()).getKey());
         }
 
 
-        if (entity().getParagraph(inI.value()).getKey().equals("")) {
+        else {
             entity().getParagraph(inI.value()).setKey(inS.value());
             _document.getTextElement().put(inS.value(),entity().getParagraph(inI.value()));
             return;
