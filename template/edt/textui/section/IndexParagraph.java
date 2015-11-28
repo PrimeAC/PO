@@ -2,13 +2,12 @@ package edt.textui.section;
 
 import edt.core.Section;
 import edt.core.Document;
+
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputInteger;
 import pt.utl.ist.po.ui.InputString;
-
-/* FIXME: import core classes here */
 
 /**
  * Command for indexing a paragraph (nomear um parágrafo 2.2.9) of the current section.
@@ -47,10 +46,11 @@ public class IndexParagraph extends Command<Section> {
         }
 
         if (entity().getParagraph(inI.value()).getKey().length()>0) {
-            System.out.println(entity().getParagraph(inI.value()).getKey());
-            _document.getTextElement(entity().getParagraph(inI.value()).getKey()).setKey("");
-            entity().getParagraph(inI.value()).setKey("");
-            System.out.println(entity().getParagraph(inI.value()).getKey());
+            //System.out.println(entity().getParagraph(inI.value()).getKey()+"->1");
+            _document.getTextElement().remove(entity().getParagraph(inI.value()).getKey())/*.setKey("")*/;
+            //entity().getParagraph(inI.value()).setKey("");
+            //System.out.println(entity().getParagraph(inI.value()).getKey()+"->2");
+            //System.out.println(_document.getTextElement().containsKey("P1.2")+"->3");
         }
 
 
@@ -61,6 +61,7 @@ public class IndexParagraph extends Command<Section> {
         }
 
         entity().getParagraph(inI.value()).setKey(inS.value());
+        //System.out.println(entity().getParagraph(inI.value()).getKey()+"->3");
         _document.getTextElement().put(inS.value(),entity().getParagraph(inI.value()));
         display.add(Message.paragraphNameChanged());
 

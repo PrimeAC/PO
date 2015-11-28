@@ -2,13 +2,12 @@ package edt.textui.section;
 
 import edt.core.Section;
 import edt.core.Paragraph;
+
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
 import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputInteger;
 import pt.utl.ist.po.ui.InputString;
-
-/* FIXME: import core classes here */
 
 /**
  * Command for changing the content of a paragraph of the current section.

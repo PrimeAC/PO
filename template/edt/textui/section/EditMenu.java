@@ -2,13 +2,12 @@ package edt.textui.section;
 
 import edt.core.Section;
 import edt.core.Document;
-import pt.utl.ist.po.ui.Menu;
-import pt.utl.ist.po.ui.Command;
 import edt.core.Section;
-
 import edt.textui.section.*;
 
-/* FIXME: import core classes here */
+import pt.utl.ist.po.ui.Menu;
+import pt.utl.ist.po.ui.Command;
+
 
 /**
  * Represents the edit menu of this application. This menu

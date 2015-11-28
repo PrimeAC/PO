@@ -1,10 +1,9 @@
 package edt.textui.section;
 
 import edt.core.Section;
+
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
-
-/* FIXME: import core classes here */
 
 /**
  * Command for showing the content of current section.

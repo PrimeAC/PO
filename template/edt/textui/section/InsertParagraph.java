@@ -9,8 +9,6 @@ import pt.utl.ist.po.ui.Form;
 import pt.utl.ist.po.ui.InputString;
 import pt.utl.ist.po.ui.InputInteger;
 
-/* FIXME: import core classes here */
-
 /**
  * Command for adding a paragraph to the current section.
  */
