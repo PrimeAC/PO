@@ -33,12 +33,19 @@ public class OpenDocument extends Command<App> {
     @SuppressWarnings("nls")
     public final void execute() throws InvalidOperation {
         Document document = new Document();
+        Display display = new Display();
 
         Form f = new Form();
         InputString inS = new InputString(f, Message.openFile());
         f.parse();
 
-        entity().setDocument(document.loadDocument(inS.value()));
+        if (entity().getDocument().loadDocument(inS.value()) != null)
+            entity().setDocument(document.loadDocument(inS.value()));
+        else {
+            display.add(Message.fileNotFound());
+            display.display();
+        } 
+
     
     }
 }

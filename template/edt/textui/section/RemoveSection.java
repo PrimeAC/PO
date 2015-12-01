@@ -35,6 +35,8 @@ public class RemoveSection extends Command<Section> {
         Form f = new Form();
         InputInteger inI = new InputInteger(f, Message.requestSectionId());
         f.parse();
+
+        _document.getTextElement().remove(entity().getParagraph(inI.value()));
         //System.out.println(entity().getSubsections().size());
         entity().removeSection(inI.value(), _document);
         //System.out.println(entity().getSubsections().size());

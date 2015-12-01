@@ -141,6 +141,12 @@ public class Section extends TextElement {
 		return content;
 	}
 
+
+	public String accept(VisitorContent visitor){
+		return visitor.visit(this);
+	}
+	
+
 	/**
 	 * Gets the subsections of the section.
 	 * This method returns an ArrayList with the subsections of the section. 

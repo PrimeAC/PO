@@ -25,4 +25,7 @@ public abstract class TextElement implements Serializable {
 
 	public abstract int getSize();
 
+	//@Override
+    public abstract String accept(VisitorContent visitor);
+
 }

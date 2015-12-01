@@ -1,6 +1,7 @@
 package edt.textui.section;
 
 import edt.core.Section;
+import edt.core.VisitorContent;
 
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -27,6 +28,7 @@ public class ShowSection extends Command<Section> {
     public final void execute() {
         
         Display display = new Display();
+        VisitorContent visitor = new VisitorContent();
         
         display.addNewLine(entity().getContent());//paragrafos e seccoes 
         display.display();

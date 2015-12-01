@@ -19,4 +19,7 @@ public class Paragraph extends TextElement {
 	public int getSize() {
 		return _text.length();
 	}
+	public String accept(VisitorContent visitor){
+		return visitor.visit(this);
+	}
 }

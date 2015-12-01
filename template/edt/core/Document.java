@@ -106,11 +106,11 @@ public class Document extends Section implements Serializable {
 		}
 
 		catch(IOException e) {
-
+			return null;
 		}
 
 		catch(Exception e) {
-
+			return null;
 		}
 
 		return doc;		
