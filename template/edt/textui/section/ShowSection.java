@@ -30,7 +30,7 @@ public class ShowSection extends Command<Section> {
         Display display = new Display();
         VisitorContent visitor = new VisitorContent();
         
-        display.addNewLine(entity().getContent());//paragrafos e seccoes 
+        display.addNewLine(entity().accept(visitor));//paragrafos e seccoes 
         display.display();
      }
 }

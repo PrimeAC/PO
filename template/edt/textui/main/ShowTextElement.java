@@ -4,6 +4,7 @@ import edt.core.App;
 import edt.core.Document;
 import edt.core.TextElement;
 import edt.core.Section;
+import edt.core.VisitorContent;
 
 import pt.utl.ist.po.ui.Command;
 import pt.utl.ist.po.ui.Display;
@@ -34,13 +35,14 @@ public class ShowTextElement extends Command<App> {
 
         Display display = new Display();
         Form f = new Form();
+        VisitorContent visitor = new VisitorContent();
 
         InputString inS = new InputString(f, Message.requestElementId());
         f.parse();
 
         if (entity().getDocument().getTextElement().containsKey(inS.value())) {
 
-            display.add(entity().getDocument().getTextElement(inS.value()).getContent());
+            display.add(entity().getDocument().getTextElement(inS.value()).accept(visitor));
         }
         else {
             display.add(Message.noSuchTextElement(inS.value()));

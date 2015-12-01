@@ -6,10 +6,10 @@ public class VisitorContent implements Visitor {
 		String content = section.getHeadLine()+"\n";
 
 		for (Paragraph i : section.getParagraph()) {
-			content += i.getContent()+"\n"; 
+			content += visit(i)+"\n"; 
 		}
 		for (Section i : section.getSubsections()) {
-			content += i.getContent();
+			content += visit(i);
 		}
 		return content;
 	}

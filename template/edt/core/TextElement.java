@@ -21,7 +21,7 @@ public abstract class TextElement implements Serializable {
 
 	//protected boolean isIndexed() {}
 
-	public abstract String getContent();
+	//public abstract String getContent();
 
 	public abstract int getSize();
 

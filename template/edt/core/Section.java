@@ -129,7 +129,7 @@ public class Section extends TextElement {
 	 *
 	 * @return String - section content
 	 */
-	public String getContent() {
+	/*public String getContent() {
 		String content = this.getHeadLine()+"\n";
 
 		for (Paragraph i : this._paragraph) {
@@ -139,7 +139,7 @@ public class Section extends TextElement {
 			content += i.getContent();
 		}
 		return content;
-	}
+	}*/
 
 
 	public String accept(VisitorContent visitor){
