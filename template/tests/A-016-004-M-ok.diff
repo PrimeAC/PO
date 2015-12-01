@@ -1,0 +1,74 @@
+*** tests/A-016-004-M-ok.out	2015-11-27 18:57:05.619030222 +0000
+--- tests/A-016-004-M-ok.outhyp	2015-12-01 20:55:17.229608295 +0000
+***************
+*** 35,97 ****
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Identificador da secção: Menu de Edição
+! 1 - Mudar título
+! 2 - Listar secções
+! 3 - Mostrar conteúdo
+! 4 - Seleccionar secção
+! 5 - Inserir secção
+! 6 - Nomear secção
+! 7 - Remover secção
+! 8 - Inserir parágrafo
+! 9 - Nomear parágrafo
+! 10 - Alterar parágrafo
+! 11 - Remover parágrafo
+! 0 - Sair
+! Escolha uma opção: Menu de Edição
+! 1 - Mudar título
+! 2 - Listar secções
+! 3 - Mostrar conteúdo
+! 4 - Seleccionar secção
+! 5 - Inserir secção
+! 6 - Nomear secção
+! 7 - Remover secção
+! 8 - Inserir parágrafo
+! 9 - Nomear parágrafo
+! 10 - Alterar parágrafo
+! 11 - Remover parágrafo
+! 0 - Sair
+! Escolha uma opção: {Objects in Space}
+! [] {A Walk in the Desert}
+! These aren’t the droids you’re looking for.
+! [] {Patience You Must Have}
+! Do or do not.
+! There is no try.
+! [] {Drama in the Clouds}
+! Obi-Wan never told you what happened to your father.
+! He told me enough! He told me YOU killed him.
+! NOOOOOOOOOOOOOOOOOOO...
+! Menu de Edição
+! 1 - Mudar título
+! 2 - Listar secções
+! 3 - Mostrar conteúdo
+! 4 - Seleccionar secção
+! 5 - Inserir secção
+! 6 - Nomear secção
+! 7 - Remover secção
+! 8 - Inserir parágrafo
+! 9 - Nomear parágrafo
+! 10 - Alterar parágrafo
+! 11 - Remover parágrafo
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Novo
+! 2 - Abrir
+! 3 - Guardar
+! 4 - Listar meta-informação
+! 5 - Adicionar autor
+! 6 - Listar secções
+! 7 - Mostrar elemento de texto
+! 8 - Editar
+! 0 - Sair
+! Escolha uma opção: 
+\ No newline at end of file
+--- 35,38 ----
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Identificador da secção: 
+\ No newline at end of file

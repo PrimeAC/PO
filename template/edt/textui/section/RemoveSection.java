@@ -41,7 +41,8 @@ public class RemoveSection extends Command<Section> {
         entity().removeSection(inI.value(), _document);
         //System.out.println(entity().getSubsections().size());
         //System.out.println(_document.getTextElement().size());
-        _document.removeFromIndex(entity().getSection(inI.value()));
+       // System.out.println("bshas");
+        //_document.removeFromIndex(entity().getSection(inI.value()));
         //System.out.println(_document.getTextElement().size());
     }
 }

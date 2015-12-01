@@ -19,7 +19,13 @@ public abstract class TextElement implements Serializable {
 		_key = key;
 	}
 
-	//protected boolean isIndexed() {}
+	protected boolean isIndexed() {
+		if (this.getKey() == "")
+			return false;
+		else {
+			return true;
+		}
+	}
 
 	//public abstract String getContent();
 

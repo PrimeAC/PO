@@ -166,11 +166,12 @@ public class Section extends TextElement {
 	 */
 	public Section getSection(int idx) {
 		//System.out.println("indice:"+idx);
-		if(idx>=0 && idx<this.getSubsections().size()){
+		if (idx >= 0 && idx < this.getSubsections().size()){
 			return _subsection.get(idx);
 		}
 		
 		else {
+			System.out.println("entrei no null");
 			return null;
 		}
 	}
@@ -181,9 +182,9 @@ public class Section extends TextElement {
 	 *
 	 * @return String - section unique id
 	 */
-	public String getSubsectionIndex() {
-		return "";
-	} 
+	/*public String getSubsectionIndex() {
+		return _subsection.indexOf(this);
+	} */
 
 	/**
 	 * Adds a subsection to the section.
@@ -211,11 +212,27 @@ public class Section extends TextElement {
 	 * @return boolean - result of the removal
 	 */
 	public boolean removeSection(int idx, Document doc) {
-		
-		//System.out.println("sub size:"+_subsection.size());
-		//System.out.println("doc size:"+doc.getSubsections().size());
-		//return doc.getSubsections().remove(doc.getSection(idx));
+		//System.out.println("entrei 1");
+		removeAllSubsections(this.getSection(idx), doc);
+		//System.out.println("entrei 5");
+		//System.out.println(this.getSubsections().size());
+		doc.removeFromIndex(this.getSection(idx));
 		return this.getSubsections().remove(this.getSection(idx));
+	}
+
+	public void removeAllSubsections(Section section, Document doc) {
+		System.out.println("eu");
+		if (section.getParagraph().size() > 0) {
+			for (Paragraph j : section.getParagraph()) {
+				doc.removeFromIndex(j);
+			}
+		}
+		if (section.getSubsections().size() > 0) {	
+			for (Section i : section.getSubsections()) {
+				doc.removeFromIndex(i);
+				removeAllSubsections(i, doc);
+			}
+		}
 	}
 
 	/**
