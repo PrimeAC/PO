@@ -36,13 +36,7 @@ public class RemoveSection extends Command<Section> {
         InputInteger inI = new InputInteger(f, Message.requestSectionId());
         f.parse();
 
-       // _document.getTextElement().remove(entity().getParagraph(inI.value()));
-        //System.out.println(entity().getSubsections().size());
+  
         entity().removeSection(inI.value(), _document);
-        //System.out.println(entity().getSubsections().size());
-        //System.out.println(_document.getTextElement().size());
-       // System.out.println("bshas");
-        //_document.removeFromIndex(entity().getSection(inI.value()));
-        //System.out.println(_document.getTextElement().size());
     }
 }

@@ -84,14 +84,8 @@ public class Document extends Section implements Serializable {
 
 	public void removeFromIndex(TextElement ele) {
 
-		if (ele.isIndexed()) {
-			for (String i : _textElement.keySet()) {
-				if (_textElement.get(i).equals(ele)) {
-					_textElement.remove(i);
-					break;
-				}
-			}
-		}
+		_textElement.remove(ele.getKey());
+		ele.setKey("");
 	}
 
 	public Document loadDocument(String filename) {

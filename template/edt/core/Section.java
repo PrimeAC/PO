@@ -59,6 +59,12 @@ public class Section extends TextElement {
 		}
 	}
 
+	/**
+	 * This methods returns all titles.
+	 * This function returns all the titles. 
+	 *
+	 * @return String - title between braces
+	 */
 	public String getAllTitles(int flag) {
 		String titles="";
 
@@ -123,24 +129,6 @@ public class Section extends TextElement {
 		return _title;
 	}
 
-	/**
-	 * Gets the content of the section.
-	 * This method gives all the paragraphs and subsections  of the section concatenated in a string. 
-	 *
-	 * @return String - section content
-	 */
-	/*public String getContent() {
-		String content = this.getHeadLine()+"\n";
-
-		for (Paragraph i : this._paragraph) {
-			content += i.getContent()+"\n"; 
-		}
-		for (Section i : this.getSubsections()) {
-			content += i.getContent();
-		}
-		return content;
-	}*/
-
 
 	public String accept(VisitorContent visitor){
 		return visitor.visit(this);
@@ -165,26 +153,14 @@ public class Section extends TextElement {
 	 * @return Section - section associated with that index
 	 */
 	public Section getSection(int idx) {
-		//System.out.println("indice:"+idx);
 		if (idx >= 0 && idx < this.getSubsections().size()){
 			return _subsection.get(idx);
 		}
 		
 		else {
-			//System.out.println("entrei no null");
 			return null;
 		}
 	}
-
-	/**
-	 * Returns the index of a subsection.
-	 * This method returns the unique id of a section. 
-	 *
-	 * @return String - section unique id
-	 */
-	/*public String getSubsectionIndex() {
-		return _subsection.indexOf(this);
-	} */
 
 	/**
 	 * Adds a subsection to the section.
@@ -221,10 +197,16 @@ public class Section extends TextElement {
 		return this.getSubsections().remove(this.getSection(idx));
 	}
 
+	/**
+	 * Removes all the subsections and paragraphs from a section.
+	 * This method receives an section and a document and removes all the subsections and paragraphs from the HashMap. 
+	 *
+	 * @param section - section
+	 * @param doc - document which a subsection is going to be removed
+	 */
 	public void removeAllSubsections(Section section, Document doc) {
 
 		for (Paragraph j : section.getParagraph()) {
-
 			if(j.isIndexed()){
 
 				doc.removeFromIndex(j);
@@ -232,8 +214,6 @@ public class Section extends TextElement {
 		}
 
 		for (Section i : section.getSubsections()) {
-
-
 			for (Paragraph j : _paragraph) {
 
 				if(j.isIndexed()){

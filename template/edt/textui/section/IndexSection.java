@@ -46,7 +46,7 @@ public class IndexSection extends Command<Section> {
         }
 
         if (_document.getTextElement().containsKey(inS.value())) {
-            _document.getTextElement(inS.value()).setKey("");
+            _document.removeFromIndex(_document.getTextElement(inS.value()));
 
         }
 

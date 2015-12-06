@@ -1,0 +1,20 @@
+*** tests/A-015-004-M-ok.out	2015-11-16 16:14:32.000000000 +0000
+--- tests/A-015-004-M-ok.outhyp	2015-12-06 23:07:22.052878305 +0000
+***************
+*** 21,28 ****
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Identificador da secção: Identificador único: O nome da secção foi alterado.
+! Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo
+--- 21,27 ----
+  10 - Alterar parágrafo
+  11 - Remover parágrafo
+  0 - Sair
+! Escolha uma opção: Identificador da secção: Identificador único: Menu de Edição
+  1 - Mudar título
+  2 - Listar secções
+  3 - Mostrar conteúdo

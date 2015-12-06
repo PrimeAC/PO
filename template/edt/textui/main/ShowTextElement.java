@@ -39,10 +39,11 @@ public class ShowTextElement extends Command<App> {
 
         InputString inS = new InputString(f, Message.requestElementId());
         f.parse();
-
+        System.out.println(entity().getDocument().getTextElement().size());
         if (entity().getDocument().getTextElement().containsKey(inS.value())) {
-
+            
             display.add(entity().getDocument().getTextElement(inS.value()).accept(visitor));
+
         }
         else {
             display.add(Message.noSuchTextElement(inS.value()));
