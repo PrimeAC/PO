@@ -36,7 +36,7 @@ public class RemoveSection extends Command<Section> {
         InputInteger inI = new InputInteger(f, Message.requestSectionId());
         f.parse();
 
-  
+       
         entity().removeSection(inI.value(), _document);
     }
 }

@@ -207,6 +207,7 @@ public class Section extends TextElement {
 	public void removeAllSubsections(Section section, Document doc) {
 
 		for (Paragraph j : section.getParagraph()) {
+
 			if(j.isIndexed()){
 
 				doc.removeFromIndex(j);
@@ -214,7 +215,12 @@ public class Section extends TextElement {
 		}
 
 		for (Section i : section.getSubsections()) {
-			for (Paragraph j : _paragraph) {
+			/*if (i.isIndexed()) {
+				doc.removeFromIndex(i);
+			}*/
+			removeAllSubsections(i, doc);
+
+		/*	for (Paragraph j : _paragraph) {
 
 				if(j.isIndexed()){
 					doc.removeFromIndex(j);
@@ -223,7 +229,7 @@ public class Section extends TextElement {
 			removeAllSubsections(i, doc);
 			if (i.isIndexed()) {
 				doc.removeFromIndex(i);
-			}
+			}*/
 		}
 	}
 

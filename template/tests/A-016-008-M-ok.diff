@@ -1,26 +1,5 @@
 *** tests/A-016-008-M-ok.out	2015-11-19 19:43:06.000000000 +0000
---- tests/A-016-008-M-ok.outhyp	2015-12-06 23:07:23.720878278 +0000
-***************
-*** 156,164 ****
-  11 - Remover parágrafo
-  0 - Sair
-  Escolha uma opção: {Objects in Space}
-! [sec1] {A Walk in the Desert}
-  These aren’t the droids you’re looking for.
-! [sec2] {Drama in the Clouds}
-  Obi-Wan never told you what happened to your father.
-  He told me enough! He told me YOU killed him.
-  NOOOOOOOOOOOOOOOOOOO...
---- 156,164 ----
-  11 - Remover parágrafo
-  0 - Sair
-  Escolha uma opção: {Objects in Space}
-! [] {A Walk in the Desert}
-  These aren’t the droids you’re looking for.
-! [] {Drama in the Clouds}
-  Obi-Wan never told you what happened to your father.
-  He told me enough! He told me YOU killed him.
-  NOOOOOOOOOOOOOOOOOOO...
+--- tests/A-016-008-M-ok.outhyp	2015-12-07 10:59:59.996011248 +0000
 ***************
 *** 189,195 ****
   Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
@@ -34,7 +13,24 @@
   Autor: Obi-Wan Kenobi/ob1@tatooine.geocities.com
   Secções de topo: 2
   Dimensão do documento (bytes): 218
-! Identificadores únicos: 0
+! Identificadores únicos: 3
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+***************
+*** 200,206 ****
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: O elemento de texto 'Sec1.1' não existe.
+  Menu Principal
+  1 - Novo
+  2 - Abrir
+--- 200,206 ----
+  7 - Mostrar elemento de texto
+  8 - Editar
+  0 - Sair
+! Escolha uma opção: Identificador do elemento de texto: [Sec1.1] {Sec 1-1}
   Menu Principal
   1 - Novo
   2 - Abrir

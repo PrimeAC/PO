@@ -1,0 +1,2 @@
+java -cp po-uilib.jar:.:edt-support.jar -Dimport=tests/A-003-003-M-ok.import edt.textui.Editor 
+

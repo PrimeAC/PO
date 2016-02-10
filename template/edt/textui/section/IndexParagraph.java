@@ -45,11 +45,35 @@ public class IndexParagraph extends Command<Section> {
             return;
         }
 
+        
+        if (inS.value().equals("")) {
+            if (_document.getTextElement().containsKey(entity().getParagraph(inI.value()).getKey())) {
+                _document.removeFromIndex(entity().getParagraph(inI.value()));
+                return;
+            }
+            else {
+                entity().getParagraph(inI.value()).setKey("");
+                return;
+            }
+        }
+        
+
         if (entity().getParagraph(inI.value()).getKey().length()>0) {
             _document.getTextElement().remove(entity().getParagraph(inI.value()).getKey());
 
+            entity().getParagraph(inI.value()).setKey(inS.value());
+            _document.getTextElement().put(inS.value(),entity().getParagraph(inI.value()));
+            display.add(Message.paragraphNameChanged());
+
+            display.display();
         }
 
+        if (_document.getTextElement().containsKey(inS.value())) {
+            _document.removeFromIndex(_document.getTextElement(inS.value()));
+            entity().getParagraph(inI.value()).setKey(inS.value());
+            _document.getTextElement().put(inS.value(),entity().getParagraph(inI.value()));
+            return;
+        }
 
         else {
             entity().getParagraph(inI.value()).setKey(inS.value());
@@ -57,10 +81,5 @@ public class IndexParagraph extends Command<Section> {
             return;
         }
 
-        entity().getParagraph(inI.value()).setKey(inS.value());
-        _document.getTextElement().put(inS.value(),entity().getParagraph(inI.value()));
-        display.add(Message.paragraphNameChanged());
-
-        display.display();
     }
 }

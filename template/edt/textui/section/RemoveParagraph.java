@@ -34,14 +34,14 @@ public class RemoveParagraph extends Command<Section> {
         Form f = new Form();
         InputInteger inI = new InputInteger(f, Message.requestParagraphId());
         f.parse();
-
+        
         if (entity().getParagraph(inI.value())==null){
             display.add(Message.noSuchParagraph(inI.value()));
             display.display();
             return;
         }
 
-        entity().removeParagraph(inI.value(), _document);
         _document.removeFromIndex(entity().getParagraph(inI.value()));
+        entity().removeParagraph(inI.value(), _document);
     }
 }

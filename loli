@@ -1,0 +1,1 @@
+java Dimport=A-003-001M-ok.import -cp po-uilib.jar:.:edt-support.jar edt.textui.Editor

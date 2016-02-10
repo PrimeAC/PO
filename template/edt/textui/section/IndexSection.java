@@ -45,7 +45,21 @@ public class IndexSection extends Command<Section> {
             return;
         }
 
+        
+        if (inS.value().equals("")) {
+            if (_document.getTextElement().containsKey(entity().getSection(inI.value()).getKey())) {
+                _document.removeFromIndex(entity().getSection(inI.value()));
+                return;
+            }
+            else {
+                entity().getSection(inI.value()).setKey("");
+                return;
+            }
+        }
+        
+
         if (_document.getTextElement().containsKey(inS.value())) {
+            //_document.getTextElement(inS.value()).setKey("");
             _document.removeFromIndex(_document.getTextElement(inS.value()));
 
         }
