@@ -12,5 +12,5 @@ No Installation required.
 
 # Execution
 Run the following commands inside template directory: 
-	1. make 
-	2. make run
+* `make` 
+* `make run`
